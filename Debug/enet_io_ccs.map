@@ -1,0 +1,2218 @@
+******************************************************************************
+                  TI ARM Linker PC v20.2.7                     
+******************************************************************************
+>> Linked Thu Aug 20 08:49:49 2026
+
+OUTPUT FILE NAME:   <DDS_multivoies_ad9959.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 0001a0a9
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00100000  0001af42  000e50be  R  X
+  SRAM                  20000000   00040000  0003ff75  0000008b  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    0001af48   0001af48    r-x
+  00000000    00000000    00000200   00000200    r-- .intvecs
+  00000200    00000200    0001a456   0001a456    r-x .text
+  0001a658    0001a658    000007a4   000007a4    r-- .const
+  0001ae00    0001ae00    00000148   00000148    r-- .cinit
+20000000    20000000    0003ff80   00000000    rw-
+  20000000    20000000    0000026c   00000000    rw- .vtable
+  20000270    20000270    0003f0f4   00000000    rw- .bss
+  2003f368    2003f368    00000815   00000000    rw- .data
+  2003fb80    2003fb80    00000400   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    00000200     
+                  00000000    00000200     startup_ccs.obj (.intvecs)
+
+.text      0    00000200    0001a456     
+                  00000200    00009940     main_ARM_TM4C1294.obj (.text)
+                  00009b40    000067a0     lwiplib.obj (.text)
+                  000102e0    00004698     seq_table_engine.obj (.text)
+                  00014978    00001c2c     AD9959.obj (.text)
+                  000165a4    00000a4e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:__TI_printfi)
+                  00016ff2    00000002                                   : div0.asm.obj (.text)
+                  00016ff4    000006e0     ustdlib.obj (.text)
+                  000176d4    000005fc     tcp_server.obj (.text)
+                  00017cd0    00000358     uartstdio.obj (.text)
+                  00018028    00000270     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_a)
+                  00018298    00000200     driverlib.lib : sysctl.obj (.text:SysCtlClockFreqSet)
+                  00018498    000001d0     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_g)
+                  00018668    000001b6                                   : fd_add_t2.asm.obj (.text)
+                  0001881e    00000002     --HOLE-- [fill = 0]
+                  00018820    0000016c     driverlib.lib : gpio.obj (.text:GPIOPadConfigSet)
+                  0001898c    0000015c     rtsv7M4_T_le_v4SPD16_eabi.lib : strtoull.c.obj (.text:strtoull)
+                  00018ae8    00000158     locator.obj (.text)
+                  00018c40    0000013c     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_e)
+                  00018d7c    00000136                                   : fd_div_t2.asm.obj (.text)
+                  00018eb2    00000002     --HOLE-- [fill = 0]
+                  00018eb4    00000124                                   : _printfi.c.obj (.text:fcvt)
+                  00018fd8    00000110                                   : s_scalbn.c.obj (.text:scalbn)
+                  000190e8    00000110                                   : strtoul.c.obj (.text:strtoul)
+                  000191f8    000000fc                                   : fd_mul_t2.asm.obj (.text)
+                  000192f4    000000b1                                   : _printfi.c.obj (.text:_ltostr)
+                  000193a5    00000001     --HOLE-- [fill = 0]
+                  000193a6    0000009c                                   : memcpy_t2.asm.obj (.text)
+                  00019442    00000096                                   : ull_div_t2.asm.obj (.text)
+                  000194d8    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdcmple)
+                  0001955e    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdrcmple)
+                  000195e4    0000007a                                   : memset_t2.asm.obj (.text)
+                  0001965e    00000002     --HOLE-- [fill = 0]
+                  00019660    00000078     driverlib.lib : emac.obj (.text:EMACInit)
+                  000196d8    0000006e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_mcpy)
+                  00019746    00000002     --HOLE-- [fill = 0]
+                  00019748    00000068     driverlib.lib : flash.obj (.text:FlashProgram)
+                  000197b0    00000068                   : interrupt.obj (.text:IntDisable)
+                  00019818    00000068                   : interrupt.obj (.text:IntEnable)
+                  00019880    00000068     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  000198e8    00000064                                   : s_frexp.c.obj (.text:frexp)
+                  0001994c    00000060     driverlib.lib : timer.obj (.text:TimerConfigure)
+                  000199ac    00000058                   : emac.obj (.text:EMACPHYConfigSet)
+                  00019a04    00000058                   : gpio.obj (.text:GPIOIntTypeSet)
+                  00019a5c    00000056     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_f)
+                  00019ab2    00000054                                   : _ltoa.c.obj (.text:__TI_ltoa)
+                  00019b06    00000052                                   : _printfi.c.obj (.text:_ecpy)
+                  00019b58    00000050     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralReset)
+                  00019ba8    0000004c                   : gpio.obj (.text:GPIOPinConfigure)
+                  00019bf4    0000004c                   : timer.obj (.text:_TimerIntNumberGet)
+                  00019c40    0000004c     rtsv7M4_T_le_v4SPD16_eabi.lib : atoi.c.obj (.text:atoi)
+                  00019c8c    00000048     driverlib.lib : interrupt.obj (.text:IntPendClear)
+                  00019cd4    00000048                   : sysctl.obj (.text:_SysCtlFrequencyGet)
+                  00019d1c    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_toi_t2.asm.obj (.text)
+                  00019d64    00000046     driverlib.lib : uart.obj (.text:UARTConfigSetExpClk)
+                  00019daa    00000002     --HOLE-- [fill = 0]
+                  00019dac    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  00019df0    00000044                                   : fd_tou_t2.asm.obj (.text)
+                  00019e34    00000040                                   : u_divt2.asm.obj (.text)
+                  00019e74    00000040                                   : sprintf.c.obj (.text:sprintf)
+                  00019eb4    0000003e                                   : _printfi.c.obj (.text:_fcpy)
+                  00019ef2    0000003c     driverlib.lib : ssi.obj (.text:SSIConfigSetExpClk)
+                  00019f2e    0000003a                   : emac.obj (.text:EMACIntEnable)
+                  00019f68    00000038                   : emac.obj (.text:EMACConfigSet)
+                  00019fa0    00000038                   : sysctl.obj (.text:SysCtlPeripheralReady)
+                  00019fd8    00000034                   : emac.obj (.text:EMACConfigGet)
+                  0001a00c    00000034                   : emac.obj (.text:EMACIntClear)
+                  0001a040    00000034                   : interrupt.obj (.text:IntRegister)
+                  0001a074    00000034                   : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  0001a0a8    00000034     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  0001a0dc    00000030     driverlib.lib : flash.obj (.text:FlashErase)
+                  0001a10c    0000002e     rtsv7M4_T_le_v4SPD16_eabi.lib : i_tofd_t2.asm.obj (.text)
+                  0001a13a    0000002c     driverlib.lib : emac.obj (.text:EMACIntStatus)
+                  0001a166    0000002c                   : gpio.obj (.text:GPIODirModeSet)
+                  0001a192    00000026                   : emac.obj (.text:EMACPHYRead)
+                  0001a1b8    00000026                   : emac.obj (.text:EMACPHYWrite)
+                  0001a1de    00000002     --HOLE-- [fill = 0]
+                  0001a1e0    00000024                   : interrupt.obj (.text:IntPrioritySet)
+                  0001a204    00000024     rtsv7M4_T_le_v4SPD16_eabi.lib : memcmp.c.obj (.text:memcmp)
+                  0001a228    00000020     driverlib.lib : uart.obj (.text:UARTDisable)
+                  0001a248    00000020                   : sysctl.obj (.text:_SysCtlMemTimingGet)
+                  0001a268    00000020     rtsv7M4_T_le_v4SPD16_eabi.lib : u_tofd_t2.asm.obj (.text)
+                  0001a288    0000001e     driverlib.lib : emac.obj (.text:EMACAddrGet)
+                  0001a2a6    00000002     --HOLE-- [fill = 0]
+                  0001a2a8    0000001c                   : sysctl.obj (.text:SysCtlGPIOAHBEnable)
+                  0001a2c4    0000001c     rtsv7M4_T_le_v4SPD16_eabi.lib : memccpy.c.obj (.text:memccpy)
+                  0001a2e0    0000001a     driverlib.lib : gpio.obj (.text:GPIOPinTypeGPIOOutput)
+                  0001a2fa    0000001a     rtsv7M4_T_le_v4SPD16_eabi.lib : s_copysign.c.obj (.text:copysign)
+                  0001a314    00000018     driverlib.lib : timer.obj (.text:TimerControlLevel)
+                  0001a32c    00000018                   : timer.obj (.text:TimerDisable)
+                  0001a344    00000018                   : timer.obj (.text:TimerIntRegister)
+                  0001a35c    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : sprintf.c.obj (.text:_outs)
+                  0001a374    00000018                                   : ll_mul_t2.asm.obj (.text)
+                  0001a38c    00000016     driverlib.lib : emac.obj (.text:EMACReset)
+                  0001a3a2    00000016                   : emac.obj (.text:EMACRxEnable)
+                  0001a3b8    00000016                   : emac.obj (.text:EMACTxEnable)
+                  0001a3ce    00000016                   : gpio.obj (.text:GPIOPinTypeEthernetLED)
+                  0001a3e4    00000016                   : gpio.obj (.text:GPIOPinTypeGPIOInput)
+                  0001a3fa    00000016                   : gpio.obj (.text:GPIOPinTypeSSI)
+                  0001a410    00000016                   : gpio.obj (.text:GPIOPinTypeTimer)
+                  0001a426    00000016                   : gpio.obj (.text:GPIOPinTypeUART)
+                  0001a43c    00000016     rtsv7M4_T_le_v4SPD16_eabi.lib : strchr.c.obj (.text:strchr)
+                  0001a452    00000002     --HOLE-- [fill = 0]
+                  0001a454    00000014     driverlib.lib : systick.obj (.text:SysTickEnable)
+                  0001a468    00000014                   : systick.obj (.text:SysTickIntEnable)
+                  0001a47c    00000014                   : uart.obj (.text:UARTEnable)
+                  0001a490    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : strlen.c.obj (.text:strlen)
+                  0001a4a4    00000012     driverlib.lib : timer.obj (.text:TimerLoadSet)
+                  0001a4b6    00000012                   : timer.obj (.text:TimerMatchSet)
+                  0001a4c8    00000012     rtsv7M4_T_le_v4SPD16_eabi.lib : wcslen.c.obj (.text:wcslen)
+                  0001a4da    00000002     --HOLE-- [fill = 0]
+                  0001a4dc    00000010     driverlib.lib : emac.obj (.text:EMACFrameFilterSet)
+                  0001a4ec    00000010                   : interrupt.obj (.text:IntMasterDisable)
+                  0001a4fc    00000010                   : interrupt.obj (.text:IntMasterEnable)
+                  0001a50c    00000010                   : systick.obj (.text:SysTickPeriodSet)
+                  0001a51c    0000000e                   : gpio.obj (.text:GPIOIntDisable)
+                  0001a52a    0000000e                   : timer.obj (.text:TimerEnable)
+                  0001a538    0000000e                   : uart.obj (.text:UARTCharsAvail)
+                  0001a546    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  0001a554    0000000c     driverlib.lib : cpu.obj (.text:CPUcpsid)
+                  0001a560    0000000c                   : cpu.obj (.text:CPUcpsie)
+                  0001a56c    0000000c                   : gpio.obj (.text:GPIOIntEnable)
+                  0001a578    0000000c                   : ssi.obj (.text:SSIAdvModeSet)
+                  0001a584    0000000c                   : ssi.obj (.text:SSIDataGet)
+                  0001a590    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
+                  0001a59c    0000000c     startup_ccs.obj (.text)
+                  0001a5a8    0000000a     driverlib.lib : ssi.obj (.text:SSIAdvFrameHoldDisable)
+                  0001a5b2    0000000a                   : ssi.obj (.text:SSIAdvFrameHoldEnable)
+                  0001a5bc    0000000a                   : ssi.obj (.text:SSIEnable)
+                  0001a5c6    0000000a                   : timer.obj (.text:TimerIntDisable)
+                  0001a5d0    0000000a                   : uart.obj (.text:UARTCharGet)
+                  0001a5da    0000000a                   : uart.obj (.text:UARTCharPut)
+                  0001a5e4    0000000a                   : uart.obj (.text:UARTIntStatus)
+                  0001a5ee    0000000a     rtsv7M4_T_le_v4SPD16_eabi.lib : sprintf.c.obj (.text:_outc)
+                  0001a5f8    00000008     driverlib.lib : emac.obj (.text:EMACPowerManagementStatusGet)
+                  0001a600    00000008                   : emac.obj (.text:EMACTxDMAPollDemand)
+                  0001a608    00000008                   : timer.obj (.text:TimerIntEnable)
+                  0001a610    00000008                   : uart.obj (.text:UARTIntEnable)
+                  0001a618    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.text:__aeabi_errno_addr)
+                  0001a620    00000006     driverlib.lib : emac.obj (.text:EMACRxDMADescriptorListSet)
+                  0001a626    00000006                   : emac.obj (.text:EMACTimestampIntStatus)
+                  0001a62c    00000006                   : emac.obj (.text:EMACTxDMADescriptorListSet)
+                  0001a632    00000006                   : gpio.obj (.text:GPIOIntClear)
+                  0001a638    00000006                   : gpio.obj (.text:GPIOPinWrite)
+                  0001a63e    00000006                   : ssi.obj (.text:SSIClockSourceSet)
+                  0001a644    00000006                   : sysctl.obj (.text:SysCtlDelay)
+                  0001a64a    00000004                   : uart.obj (.text:UARTIntClear)
+                  0001a64e    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  0001a652    00000004                                   : exit.c.obj (.text:abort:abort)
+
+.const     0    0001a658    000007a4     
+                  0001a658    000001b0     driverlib.lib : sysctl.obj (.const:g_pppui32XTALtoVCO)
+                  0001a808    00000101     rtsv7M4_T_le_v4SPD16_eabi.lib : ctype.c.obj (.const:.string:_ctypes_)
+                  0001a909    00000003     --HOLE-- [fill = 0]
+                  0001a90c    0000009c     driverlib.lib : interrupt.obj (.const:g_pui32Regs)
+                  0001a9a8    00000090                   : gpio.obj (.const:g_pui32GPIOBaseAddrs)
+                  0001aa38    00000076     lwiplib.obj (.const:.string)
+                  0001aaae    00000002     --HOLE-- [fill = 0]
+                  0001aab0    0000006e     AD9959.obj (.const:.string)
+                  0001ab1e    00000002     --HOLE-- [fill = 0]
+                  0001ab20    0000006c     driverlib.lib : sysctl.obj (.const:g_pui32Xtals)
+                  0001ab8c    00000060                   : timer.obj (.const:g_ppui32TimerIntMap)
+                  0001abec    00000050     main_ARM_TM4C1294.obj (.const:g_FrequencyTable)
+                  0001ac3c    00000040     driverlib.lib : timer.obj (.const:g_ppui32TimerIntMapSnowflake)
+                  0001ac7c    00000030     ustdlib.obj (.const:g_psDaysToMonth)
+                  0001acac    00000030     driverlib.lib : sysctl.obj (.const:g_sXTALtoMEMTIM)
+                  0001acdc    0000002c     lwiplib.obj (.const:tcp_state_str)
+                  0001ad08    00000018     ustdlib.obj (.const:g_pfExponents)
+                  0001ad20    00000018     driverlib.lib : emac.obj (.const:g_pi16MIIClockDiv)
+                  0001ad38    00000014                   : interrupt.obj (.const:g_pui32Dii16Regs)
+                  0001ad4c    00000014                   : interrupt.obj (.const:g_pui32EnRegs)
+                  0001ad60    00000014                   : interrupt.obj (.const:g_pui32UnpendRegs)
+                  0001ad74    00000010     lwiplib.obj (.const:memp_num)
+                  0001ad84    00000010     lwiplib.obj (.const:memp_sizes)
+                  0001ad94    00000010     lwiplib.obj (.const:tcp_pcb_lists)
+                  0001ada4    0000000d     lwiplib.obj (.const:.string:tcp_backoff)
+                  0001adb1    00000003     --HOLE-- [fill = 0]
+                  0001adb4    0000000c     main_ARM_TM4C1294.obj (.const:TYPEDDS)
+                  0001adc0    0000000c     uartstdio.obj (.const:g_ui32UARTBase)
+                  0001adcc    0000000c     uartstdio.obj (.const:g_ui32UARTPeriph)
+                  0001add8    00000008     driverlib.lib : sysctl.obj (.const:g_pui32VCOFrequencies)
+                  0001ade0    00000007     lwiplib.obj (.const:.string:tcp_persist_backoff)
+                  0001ade7    00000006     lwiplib.obj (.const:ethbroadcast)
+                  0001aded    00000006     lwiplib.obj (.const:ethzero)
+                  0001adf3    00000001     --HOLE-- [fill = 0]
+                  0001adf4    00000004     lwiplib.obj (.const:ip_addr_any)
+                  0001adf8    00000004     lwiplib.obj (.const:ip_addr_broadcast)
+
+.cinit     0    0001ae00    00000148     
+                  0001ae00    00000110     (.cinit..data.load) [load image, compression = lzss]
+                  0001af10    0000000c     (__TI_handler_table)
+                  0001af1c    00000004     --HOLE-- [fill = 0]
+                  0001af20    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  0001af28    00000008     (.cinit..vtable.load) [load image, compression = zero_init]
+                  0001af30    00000018     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.vtable    0    20000000    0000026c     UNINITIALIZED
+                  20000000    0000026c     driverlib.lib : interrupt.obj (.vtable)
+
+.bss       0    20000270    0003f0f4     UNINITIALIZED
+                  20000270    0001001c     (.common:ram_heap)
+                  2001028c    0000e190     (.common:g_seq_def)
+                  2001e41c    00009000     seq_table_engine.obj (.bss:g_tbl34_ev)
+                  2002741c    000073d4     lwiplib.obj (.bss:memp_memory)
+                  2002e7f0    00006000     seq_table_engine.obj (.bss:g_tbl34_blob)
+                  200347f0    0000303c     main_ARM_TM4C1294.obj (.bss:g_seq_fast_plan)
+                  2003782c    00003000     seq_table_engine.obj (.bss:g_tbl34_gate_ev)
+                  2003a82c    00002000     seq_table_engine.obj (.bss:g_tbl34_gate_blob)
+                  2003c82c    000012cc     main_ARM_TM4C1294.obj (.bss:tmp$1)
+                  2003daf8    00000420     (.common:g_seq_rt)
+                  2003df18    00000400     main_ARM_TM4C1294.obj (.bss:frame_buf)
+                  2003e318    00000360     (.common:g_pTxDescriptors)
+                  2003e678    0000012c     (.common:msg)
+                  2003e7a4    0000012c     (.common:msg_DDS_nb)
+                  2003e8d0    0000012c     (.common:msg_command)
+                  2003e9fc    0000012c     (.common:msg_reply)
+                  2003eb28    0000012c     (.common:msg_value)
+                  2003ec54    00000120     (.common:g_pRxDescriptors)
+                  2003ed74    00000120     (.common:lwip_stats)
+                  2003ee94    000000c8     lwiplib.obj (.bss:arp_table)
+                  2003ef5c    000000a8     (.common:g_seq_hw_engine)
+                  2003f004    00000058     (.common:tempDataUART)
+                  2003f05c    00000054     locator.obj (.bss:g_pui8LocatorData)
+                  2003f0b0    00000054     seq_table_engine.obj (.bss:g_tbl34_def)
+                  2003f104    00000050     lwiplib.obj (.bss)
+                  2003f154    00000038     lwiplib.obj (.bss:g_sNetIF)
+                  2003f18c    00000028     (.common:dhcp_rx_options_val)
+                  2003f1b4    00000024     seq_table_engine.obj (.bss:g_tbl34_rt)
+                  2003f1d8    00000020     seq_table_engine.obj (.bss:g_tbl34_gate_def)
+                  2003f1f8    00000020     seq_table_engine.obj (.bss:g_tbl365_fast_def)
+                  2003f218    00000020     lwiplib.obj (.bss:memp_tab)
+                  2003f238    00000010     lwiplib.obj (.bss:inseg)
+                  2003f248    00000010     lwiplib.obj (.bss:str$3)
+                  2003f258    00000010     (.common:controlRegisterValueAD9959DDS)
+                  2003f268    00000010     (.common:frequencyValueAD9959DDS)
+                  2003f278    0000000c     seq_table_engine.obj (.bss:g_tbl34_group)
+                  2003f284    0000000c     (.common:dhcp_rx_options_given)
+                  2003f290    00000008     (.common:amplValueAD9959DDS)
+                  2003f298    00000008     (.common:powValueAD9959DDS)
+                  2003f2a0    00000008     (.common:time_step_s)
+                  2003f2a8    00000004     main_ARM_TM4C1294.obj (.bss)
+                  2003f2ac    00000004     (.common:atCom)
+                  2003f2b0    00000004     (.common:colonCom)
+                  2003f2b4    00000004     (.common:current_header)
+                  2003f2b8    00000004     (.common:current_iphdr_dest)
+                  2003f2bc    00000004     (.common:current_iphdr_src)
+                  2003f2c0    00000004     (.common:current_netif)
+                  2003f2c4    00000004     (.common:dataReadSSIoneByte)
+                  2003f2c8    00000004     (.common:dollarCom)
+                  2003f2cc    00000004     (.common:freq_end_hz)
+                  2003f2d0    00000004     (.common:freq_start_hz)
+                  2003f2d4    00000004     (.common:freq_step_hz)
+                  2003f2d8    00000004     (.common:frequency_data)
+                  2003f2dc    00000004     (.common:frequency_data_in_Hz)
+                  2003f2e0    00000004     (.common:g_channel)
+                  2003f2e4    00000004     (.common:g_current_ftw)
+                  2003f2e8    00000004     (.common:g_ftw_end)
+                  2003f2ec    00000004     (.common:g_ftw_start_config)
+                  2003f2f0    00000004     (.common:g_ftw_step)
+                  2003f2f4    00000004     (.common:g_pfnTimerHandler)
+                  2003f2f8    00000004     (.common:g_ui32AbnormalInts)
+                  2003f2fc    00000004     (.common:g_ui32IPAddress)
+                  2003f300    00000004     (.common:g_ui32NormalInts)
+                  2003f304    00000004     (.common:g_ui32PortAddress)
+                  2003f308    00000004     (.common:g_ui32SysClock)
+                  2003f30c    00000004     (.common:hashtagCom)
+                  2003f310    00000004     (.common:netif_default)
+                  2003f314    00000004     (.common:netif_list)
+                  2003f318    00000004     (.common:pColon)
+                  2003f31c    00000004     (.common:pDollar)
+                  2003f320    00000004     (.common:pHashtag)
+                  2003f324    00000004     (.common:pStar)
+                  2003f328    00000004     (.common:starCom)
+                  2003f32c    00000004     (.common:start_freq_hz)
+                  2003f330    00000004     (.common:tcp_active_pcbs)
+                  2003f334    00000004     (.common:tcp_bound_pcbs)
+                  2003f338    00000004     (.common:tcp_input_pcb)
+                  2003f33c    00000004     (.common:tcp_listen_pcbs)
+                  2003f340    00000004     (.common:tcp_ticks)
+                  2003f344    00000004     (.common:tcp_tmp_pcb)
+                  2003f348    00000004     (.common:tcp_tw_pcbs)
+                  2003f34c    00000004     (.common:time_step_us)
+                  2003f350    00000004     (.common:udp_pcbs)
+                  2003f354    00000002     (.common:index)
+                  2003f356    00000002     (.common:indexColon)
+                  2003f358    00000002     (.common:indexDollar)
+                  2003f35a    00000002     (.common:indexHashtag)
+                  2003f35c    00000002     (.common:indexStar)
+                  2003f35e    00000001     (.common:BUFFERED_MODE)
+                  2003f35f    00000001     (.common:BUFFERED_MODE_JUST_CHANGED)
+                  2003f360    00000001     (.common:REPLY_FROM_TCP_WANTED)
+                  2003f361    00000001     (.common:g_is_rising)
+                  2003f362    00000001     (.common:pbuf_free_ooseq_pending)
+                  2003f363    00000001     (.common:tcp_active_pcbs_changed)
+
+.data      0    2003f368    00000815     UNINITIALIZED
+                  2003f368    00000218     seq_table_engine.obj (.data)
+                  2003f580    000001a8     main_ARM_TM4C1294.obj (.data)
+                  2003f728    00000038     lwiplib.obj (.data)
+                  2003f760    00000034     main_ARM_TM4C1294.obj (.data:g_seq_dbg_preupdate_sample_ticks)
+                  2003f794    00000034     main_ARM_TM4C1294.obj (.data:g_seq_preupdate_estimate_ticks)
+                  2003f7c8    00000028     AD9959.obj (.data:enum_AD9959DDS_commands_str)
+                  2003f7f0    00000010     lwiplib.obj (.data:g_RxDescList)
+                  2003f800    00000010     lwiplib.obj (.data:g_TxDescList)
+                  2003f810    0000000c     AD9959.obj (.data)
+                  2003f81c    0000000c     lwiplib.obj (.data:g_StellarisIFData)
+                  2003f828    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_arm_mask_by_ttl)
+                  2003f834    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_dbg_hw_companion_late)
+                  2003f840    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_dbg_hw_companion_preload_max_ticks)
+                  2003f84c    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_dbg_hw_companion_preload_ticks)
+                  2003f858    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_dbg_hw_engine_isr_max_ticks)
+                  2003f864    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_dbg_hw_engine_isr_ticks)
+                  2003f870    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_dbg_hw_engine_late_max_ticks)
+                  2003f87c    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_dbg_hw_engine_late_ticks)
+                  2003f888    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_dbg_hw_engine_miss)
+                  2003f894    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_hw_resume_update_ticks)
+                  2003f8a0    0000000c     main_ARM_TM4C1294.obj (.data:g_seq_priority_ttl)
+                  2003f8ac    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_commit_count)
+                  2003f8b8    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_event_crc_error)
+                  2003f8c4    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_event_duplicate_count)
+                  2003f8d0    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_gate_seen)
+                  2003f8dc    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_gate_wrong_ttl)
+                  2003f8e8    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_isr_max_ticks)
+                  2003f8f4    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_isr_ticks)
+                  2003f900    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_late_max_ticks)
+                  2003f90c    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_late_ticks)
+                  2003f918    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_main_trigger_masked)
+                  2003f924    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_preload_error)
+                  2003f930    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_preload_max_ticks)
+                  2003f93c    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_preload_ticks)
+                  2003f948    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_reset_recovery_count)
+                  2003f954    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_reset_recovery_error)
+                  2003f960    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_reset_recovery_master_high_ticks)
+                  2003f96c    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_reset_recovery_program_count)
+                  2003f978    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_reset_recovery_quad_init_count)
+                  2003f984    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_reset_recovery_single_init_count)
+                  2003f990    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_reset_recovery_total_ticks)
+                  2003f99c    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_reset_recovery_update_count)
+                  2003f9a8    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_start_accepted)
+                  2003f9b4    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_start_ignored_active)
+                  2003f9c0    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_start_not_ready)
+                  2003f9cc    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_sweep_exit_count)
+                  2003f9d8    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_sweep_start_count)
+                  2003f9e4    0000000c     seq_table_engine.obj (.data:g_tbl34_dbg_ttl_seen)
+                  2003f9f0    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_native_desc_profile_low_count)
+                  2003f9fc    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_native_desc_start_count)
+                  2003fa08    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_phase_last_acr)
+                  2003fa14    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_phase_last_cfr)
+                  2003fa20    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_phase_last_cpow)
+                  2003fa2c    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_phase_last_csr)
+                  2003fa38    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_phase_last_cw1)
+                  2003fa44    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_phase_last_fdw)
+                  2003fa50    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_phase_last_ftw)
+                  2003fa5c    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_phase_last_lsrr)
+                  2003fa68    0000000c     seq_table_engine.obj (.data:g_tbl351_dbg_phase_last_rdw)
+                  2003fa74    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_event_acr_frame_count)
+                  2003fa80    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_event_cfr_frame_count)
+                  2003fa8c    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_event_cpow_frame_count)
+                  2003fa98    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_event_ftw_frame_count)
+                  2003faa4    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_native_amp_exit_count)
+                  2003fab0    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_native_amp_start_count)
+                  2003fabc    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_native_freq_exit_count)
+                  2003fac8    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_native_freq_start_count)
+                  2003fad4    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_native_phase_exit_count)
+                  2003fae0    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_native_phase_start_count)
+                  2003faec    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_reset_blackout_ticks)
+                  2003faf8    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_reset_commit_count)
+                  2003fb04    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_reset_commit_error)
+                  2003fb10    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_reset_prepare_bytes)
+                  2003fb1c    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_reset_prepare_count)
+                  2003fb28    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_reset_prepare_error)
+                  2003fb34    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_reset_restore_bytes)
+                  2003fb40    0000000c     seq_table_engine.obj (.data:g_tbl35_dbg_reset_restore_channel_mask)
+                  2003fb4c    0000000c     seq_table_engine.obj (.data:g_tbl35_reset_prepared_source)
+                  2003fb58    0000000c     seq_table_engine.obj (.data:g_tbl364_sync_update_tick)
+                  2003fb64    00000005     uartstdio.obj (.data)
+                  2003fb69    00000003     main_ARM_TM4C1294.obj (.data:g_seq_hw_resume_kind)
+                  2003fb6c    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.data)
+                  2003fb70    00000004     ustdlib.obj (.data)
+                  2003fb74    00000003     seq_table_engine.obj (.data:g_tbl34_priority)
+                  2003fb77    00000003     seq_table_engine.obj (.data:g_tbl35_reset_prepared_len)
+                  2003fb7a    00000003     seq_table_engine.obj (.data:g_tbl35_reset_prepared_ready)
+
+.stack     0    2003fb80    00000400     UNINITIALIZED
+                  2003fb80    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  2003fb84    000003fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20000000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                       code     ro data   rw data
+       ------                       ----     -------   -------
+    .\
+       lwiplib.obj                  26528    250       97278  
+       main_ARM_TM4C1294.obj        39232    92        77982  
+       seq_table_engine.obj         18072    0         83357  
+       AD9959.obj                   7212     110       101    
+       tcp_server.obj               1532     0         1546   
+       ustdlib.obj                  1760     72        4      
+       uartstdio.obj                856      24        5      
+       startup_ccs.obj              12       512       0      
+       locator.obj                  344      0         84     
+    +--+----------------------------+--------+---------+---------+
+       Total:                       95548    1060      260357 
+                                                              
+    C:/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib
+       sysctl.obj                   838      596       0      
+       interrupt.obj                400      216       620    
+       gpio.obj                     746      144       0      
+       emac.obj                     692      24        0      
+       timer.obj                    312      160       0      
+       uart.obj                     178      0         0      
+       flash.obj                    152      0         0      
+       ssi.obj                      120      0         0      
+       systick.obj                  56       0         0      
+       cpu.obj                      24       0         0      
+    +--+----------------------------+--------+---------+---------+
+       Total:                       3518     1140      620    
+                                                              
+    C:\ti\ccs1250\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       _printfi.c.obj               4851     0         0      
+       fd_add_t2.asm.obj            438      0         0      
+       strtoull.c.obj               348      0         0      
+       fd_div_t2.asm.obj            310      0         0      
+       s_scalbn.c.obj               272      0         0      
+       strtoul.c.obj                272      0         0      
+       fd_cmp_t2.asm.obj            268      0         0      
+       ctype.c.obj                  0        257       0      
+       fd_mul_t2.asm.obj            252      0         0      
+       memcpy_t2.asm.obj            156      0         0      
+       ull_div_t2.asm.obj           150      0         0      
+       memset_t2.asm.obj            122      0         0      
+       copy_decompress_lzss.c.obj   104      0         0      
+       s_frexp.c.obj                100      0         0      
+       sprintf.c.obj                98       0         0      
+       _ltoa.c.obj                  84       0         0      
+       atoi.c.obj                   76       0         0      
+       fd_toi_t2.asm.obj            72       0         0      
+       autoinit.c.obj               68       0         0      
+       fd_tou_t2.asm.obj            68       0         0      
+       u_divt2.asm.obj              64       0         0      
+       boot_cortex_m.c.obj          52       0         0      
+       i_tofd_t2.asm.obj            46       0         0      
+       memcmp.c.obj                 36       0         0      
+       u_tofd_t2.asm.obj            32       0         0      
+       memccpy.c.obj                28       0         0      
+       s_copysign.c.obj             26       0         0      
+       ll_mul_t2.asm.obj            24       0         0      
+       strchr.c.obj                 22       0         0      
+       strlen.c.obj                 20       0         0      
+       wcslen.c.obj                 18       0         0      
+       copy_decompress_none.c.obj   14       0         0      
+       copy_zero_init.c.obj         12       0         0      
+       errno.c.obj                  8        0         4      
+       exit.c.obj                   4        0         0      
+       pre_init.c.obj               4        0         0      
+       div0.asm.obj                 2        0         0      
+    +--+----------------------------+--------+---------+---------+
+       Total:                       8521     257       4      
+                                                              
+       Stack:                       0        0         1024   
+       Linker Generated:            0        324       0      
+    +--+----------------------------+--------+---------+---------+
+       Grand Total:                 107587   2781      262005 
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0001af30 records: 3, size/record: 8, table size: 24
+	.data: load addr=0001ae00, load size=00000110 bytes, run addr=2003f368, run size=00000815 bytes, compression=lzss
+	.bss: load addr=0001af20, load size=00000008 bytes, run addr=20000270, run size=0003f0f4 bytes, compression=zero_init
+	.vtable: load addr=0001af28, load size=00000008 bytes, run addr=20000000, run size=0000026c bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0001af10 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                          
+-------   ----                                          
+0000021f  AngleToPOW                                    
+00009ad1  Apply_Sweep_Configuration_ethernet            
+00009699  Apply_Sweep_Configuration_on_interrupt_port   
+00000a21  Apply_Sweep_Configuration_uart                
+2003f35e  BUFFERED_MODE                                 
+2003f35f  BUFFERED_MODE_JUST_CHANGED                    
+0001a653  C$$EXIT                                       
+0001a555  CPUcpsid                                      
+0001a561  CPUcpsie                                      
+2003f59c  CURRENT_ChannelDDS                            
+2003f598  CURRENT_DDS                                   
+2003f818  ChannelDDS                                    
+2003f5a0  ChannelDDS_UART                               
+00001ee5  DDS_GPIOK_Init_Fast                           
+00006eb9  DisplayIPAddress                              
+00006eff  DisplayPortAddress                            
+00009a91  Displaydata                                   
+0001a289  EMACAddrGet                                   
+00019fd9  EMACConfigGet                                 
+00019f69  EMACConfigSet                                 
+0001a4dd  EMACFrameFilterSet                            
+00019661  EMACInit                                      
+0001a00d  EMACIntClear                                  
+00019f2f  EMACIntEnable                                 
+0001a13b  EMACIntStatus                                 
+000199ad  EMACPHYConfigSet                              
+0001a193  EMACPHYRead                                   
+0001a1b9  EMACPHYWrite                                  
+0001a5f9  EMACPowerManagementStatusGet                  
+0001a38d  EMACReset                                     
+0001a621  EMACRxDMADescriptorListSet                    
+0001a3a3  EMACRxEnable                                  
+0001a627  EMACTimestampIntStatus                        
+0001a62d  EMACTxDMADescriptorListSet                    
+0001a601  EMACTxDMAPollDemand                           
+0001a3b9  EMACTxEnable                                  
+0000993d  ExecuteManualSweep_DDS_Setup_ethernet         
+00000a21  ExecuteManualSweep_DDS_Setup_uart             
+0001a0dd  FlashErase                                    
+00019749  FlashProgram                                  
+00000201  FreqDeciToFTW                                 
+000098f5  FreqToFTW                                     
+0001a167  GPIODirModeSet                                
+0001a633  GPIOIntClear                                  
+0001a51d  GPIOIntDisable                                
+0001a56d  GPIOIntEnable                                 
+00009791  GPIOIntHandler                                
+00019a05  GPIOIntTypeSet                                
+00018821  GPIOPadConfigSet                              
+00019ba9  GPIOPinConfigure                              
+0001a3cf  GPIOPinTypeEthernetLED                        
+0001a3e5  GPIOPinTypeGPIOInput                          
+0001a2e1  GPIOPinTypeGPIOOutput                         
+0001a3fb  GPIOPinTypeSSI                                
+0001a411  GPIOPinTypeTimer                              
+0001a427  GPIOPinTypeUART                               
+0001a639  GPIOPinWrite                                  
+0001657d  GetFrequencyTuningWord0                       
+00016573  GetamplitudeValueDDSAD9959                    
+00016569  GetpowValueDDSAD9959                          
+000020a1  IO_interrupt_portL                            
+00009c4b  InitDMADescriptors                            
+00009623  Init_Timer1A_Sweep                            
+000009d5  Init_Timer2A_Sweep                            
+000197b1  IntDisable                                    
+00019819  IntEnable                                     
+0001a4ed  IntMasterDisable                              
+0001a4fd  IntMasterEnable                               
+00019c8d  IntPendClear                                  
+0001a1e1  IntPrioritySet                                
+0001a041  IntRegister                                   
+00018c01  LocatorAppTitleSet                            
+00018bf9  LocatorBoardIDSet                             
+00018bf1  LocatorBoardTypeSet                           
+00018bdf  LocatorClientIPSet                            
+00018b99  LocatorInit                                   
+00018b7d  LocatorMACAddrSet                             
+00018ae9  LocatorVersionSet                             
+000095f1  MasterResetAllDDS                             
+2003f814  NbDDS                                         
+2003f5a4  NbDDS_UART                                    
+000019b3  PeripheralEnableInit                          
+00001d35  PortA_Init                                    
+00001d87  PortB_Init                                    
+00001de1  PortD_Init                                    
+00001e39  PortH_Init                                    
+00001e91  PortK_Init                                    
+00001f85  PortL_Init                                    
+00001f25  PortM_Init                                    
+00001ff5  PortN_Init                                    
+00002049  PortP_Init                                    
+2003f360  REPLY_FROM_TCP_WANTED                         
+0001a59d  ResetISR                                      
+0001a5a9  SSIAdvFrameHoldDisable                        
+0001a5b3  SSIAdvFrameHoldEnable                         
+0001a579  SSIAdvModeSet                                 
+0001a63f  SSIClockSourceSet                             
+00019ef3  SSIConfigSetExpClk                            
+0001a585  SSIDataGet                                    
+0001a5bd  SSIEnable                                     
+000003b5  Seq_AbortAndReleaseControl                    
+00006a11  Seq_HandleTriggeredMask                       
+00002501  Seq_ResetAllChannels                          
+00006aa1  Seq_ServicePendingTriggers                    
+00007131  Seq_StopAll                                   
+00008d1d  Seq_Timer4A_IntHandler                        
+000003b5  Sequence_AbortAndReleaseControl               
+00016521  SetFrequencyTuningWord0_DDS1                  
+000164dd  SetFrequencyTuningWord0_DDS1_burst            
+00016479  SetFrequencyTuningWord0_DDS2                  
+00016437  SetFrequencyTuningWord0_DDS2_burst            
+000163c9  SetFrequencyTuningWord0_DDS3                  
+00016379  SetFrequencyTuningWord0_DDS3_burst            
+00015145  SetFrequencyTuningWord1_ethernet              
+00015851  SetFrequencyTuningWord_ethernet               
+000162ed  SetPOW_ValueAD9959DDS1                        
+00016279  SetPOW_ValueAD9959DDS2                        
+000161f5  SetPOW_ValueAD9959DDS3                        
+00014d15  Set_frequency_step                            
+00014979  Set_time_step                                 
+00016149  SetamplValueAD9959DDS1                        
+00016009  SetamplValueAD9959DDS2                        
+00015e7d  SetamplValueAD9959DDS3                        
+00015727  SetamplValue_ethernet                         
+00015659  SetchannelDDS                                 
+00015569  SetpowValue_ethernet                          
+00018299  SysCtlClockFreqSet                            
+0001a645  SysCtlDelay                                   
+0001a2a9  SysCtlGPIOAHBEnable                           
+0001a075  SysCtlPeripheralEnable                        
+00019fa1  SysCtlPeripheralReady                         
+00019b59  SysCtlPeripheralReset                         
+0001a455  SysTickEnable                                 
+0001a469  SysTickIntEnable                              
+000095e9  SysTickIntHandler                             
+0001a50d  SysTickPeriodSet                              
+000095e3  TTL2                                          
+000095db  TTL3                                          
+000095d3  TTL4                                          
+000095cb  TTL5                                          
+000095c3  TTL6                                          
+000095bd  TTL7                                          
+000095b1  TTL8                                          
+0001adb4  TYPEDDS                                       
+000136dd  Tbl34_AnyActive                               
+000148ff  Tbl34_ArmAckPending                           
+00013531  Tbl34_EnterMode                               
+0001489d  Tbl34_HandleTriggeredMask                     
+00014257  Tbl34_Init                                    
+00014251  Tbl34_IsArmed                                 
+000138e1  Tbl34_ParseFrame                              
+000136d3  Tbl34_PreloadWorkerIntHandler                 
+00013691  Tbl34_ResetConfiguration                      
+00013671  Tbl34_Service                                 
+000135cd  Tbl34_ServiceArm                              
+000134fd  Tbl34_StopAll                                 
+00013411  Tbl34_Timer_DDS0_IntHandler                   
+00013309  Tbl34_Timer_DDS1_IntHandler                   
+000131f1  Tbl34_Timer_DDS2_IntHandler                   
+0000949d  Timer1A_IntHandler                            
+00009319  Timer2A_IntHandler                            
+00009241  Timer3A_IntHandler                            
+00009213  Timer4A_IntHandler                            
+00008ab5  Timer5A_IntHandler                            
+00008aa5  Timer6A_IntHandler                            
+00008a81  Timer7A_IntHandler                            
+0001994d  TimerConfigure                                
+0001a315  TimerControlLevel                             
+0001a32d  TimerDisable                                  
+0001a52b  TimerEnable                                   
+0001a5c7  TimerIntDisable                               
+0001a609  TimerIntEnable                                
+0001a345  TimerIntRegister                              
+0001a4a5  TimerLoadSet                                  
+0001a4b7  TimerMatchSet                                 
+0001a5d1  UARTCharGet                                   
+0001a5db  UARTCharPut                                   
+0001a539  UARTCharsAvail                                
+00019d65  UARTConfigSetExpClk                           
+0001a229  UARTDisable                                   
+0001a47d  UARTEnable                                    
+0001a64b  UARTIntClear                                  
+0001a611  UARTIntEnable                                 
+00007771  UARTIntHandler                                
+0001a5e5  UARTIntStatus                                 
+00017f9d  UARTStdioConfig                               
+00017f85  UARTgetc                                      
+00017f01  UARTgets                                      
+00017ee7  UARTprintf                                    
+00017d19  UARTvprintf                                   
+00017cd1  UARTwrite                                     
+2003ff80  __STACK_END                                   
+00000400  __STACK_SIZE                                  
+2003ff80  __STACK_TOP                                   
+0001af30  __TI_CINIT_Base                               
+0001af48  __TI_CINIT_Limit                              
+0001af10  __TI_Handler_Table_Base                       
+0001af1c  __TI_Handler_Table_Limit                      
+00019dad  __TI_auto_init_nobinit_nopinit                
+00019881  __TI_decompress_lzss                          
+0001a547  __TI_decompress_none                          
+00019ab3  __TI_ltoa                                     
+ffffffff  __TI_pprof_out_hndl                           
+000165a5  __TI_printfi                                  
+ffffffff  __TI_prof_data_size                           
+ffffffff  __TI_prof_data_start                          
+00000000  __TI_static_base__                            
+0001a591  __TI_zero_init                                
+000194d9  __aeabi_cdcmpeq                               
+000194d9  __aeabi_cdcmple                               
+0001955f  __aeabi_cdrcmple                              
+00019d1d  __aeabi_d2iz                                  
+00019df1  __aeabi_d2uiz                                 
+00018673  __aeabi_dadd                                  
+00018d7d  __aeabi_ddiv                                  
+000191f9  __aeabi_dmul                                  
+00018669  __aeabi_dsub                                  
+0001a619  __aeabi_errno_addr                            
+0001a10d  __aeabi_i2d                                   
+00016ff3  __aeabi_idiv0                                 
+00016ff3  __aeabi_ldiv0                                 
+0001a375  __aeabi_lmul                                  
+000195e5  __aeabi_memclr                                
+000195e5  __aeabi_memclr4                               
+000195e5  __aeabi_memclr8                               
+000193a7  __aeabi_memcpy                                
+000193a7  __aeabi_memcpy4                               
+000193a7  __aeabi_memcpy8                               
+000195e7  __aeabi_memset                                
+000195e7  __aeabi_memset4                               
+000195e7  __aeabi_memset8                               
+0001a269  __aeabi_ui2d                                  
+00019e35  __aeabi_uidiv                                 
+00019e35  __aeabi_uidivmod                              
+00019443  __aeabi_uldivmod                              
+ffffffff  __binit__                                     
+ffffffff  __c_args__                                    
+UNDEFED   __mpu_init                                    
+2003fb80  __stack                                       
+20000000  __start___llvm_prf_cnts                       
+20000000  __stop___llvm_prf_cnts                        
+0001a0a9  _c_int00_noargs                               
+0001a808  _ctypes_                                      
+UNDEFED   _system_post_cinit                            
+0001a64f  _system_pre_init                              
+0001a653  abort                                         
+2003f290  amplValueAD9959DDS                            
+2003f2ac  atCom                                         
+00019c41  atoi                                          
+0000e8f9  autoip_arp_reply                              
+0000e7a7  autoip_network_changed                        
+000102bd  autoip_set_struct                             
+0000a7a9  autoip_start                                  
+0000ab5f  autoip_stop                                   
+0000c4db  autoip_tmr                                    
+ffffffff  binit                                         
+00000cd9  choiceChannelDDS                              
+000008ed  choiceChannelDDS1                             
+000007b9  choiceChannelDDS2                             
+00000691  choiceChannelDDS3                             
+000005ad  choiceNbDDS                                   
+2003f2b0  colonCom                                      
+2003f258  controlRegisterValueAD9959DDS                 
+0001a2fb  copysign                                      
+0001a2fb  copysignl                                     
+2003f5ac  currentNbTimeLines                            
+2003f5b0  currentNbValueLines                           
+2003f2b4  current_header                                
+2003f2b8  current_iphdr_dest                            
+2003f2bc  current_iphdr_src                             
+2003f2c0  current_netif                                 
+2003f588  dataReadSSI                                   
+2003f590  dataReadSSIempty                              
+2003f2c4  dataReadSSIoneByte                            
+0000ea4f  dhcp_arp_reply                                
+000102ab  dhcp_cleanup                                  
+0000ad6f  dhcp_coarse_tmr                               
+0000bea9  dhcp_fine_tmr                                 
+00010215  dhcp_inform                                   
+0000e765  dhcp_network_changed                          
+0000a9b7  dhcp_release                                  
+0000aadf  dhcp_renew                                    
+2003f284  dhcp_rx_options_given                         
+2003f18c  dhcp_rx_options_val                           
+000101fb  dhcp_set_struct                               
+0000fa2d  dhcp_start                                    
+0000f9f5  dhcp_stop                                     
+2003f2c8  dollarCom                                     
+2003fb6c  errno                                         
+0000a5d1  etharp_cleanup_netif                          
+000101c1  etharp_find_addr                              
+0000c715  etharp_output                                 
+0000bcf5  etharp_query                                  
+0000c5c1  etharp_raw                                    
+0000c695  etharp_request                                
+0000ae1d  etharp_tmr                                    
+0001ade7  ethbroadcast                                  
+0000ebb5  ethernet_input                                
+0001aded  ethzero                                       
+00015e21  executeAD9959SingleBufferedCmd                
+0000705d  flashMemoryAD9959DDS                          
+2003f2cc  freq_end_hz                                   
+2003f2d0  freq_start_hz                                 
+2003f2d4  freq_step_hz                                  
+2003f268  frequencyValueAD9959DDS                       
+2003f2d8  frequency_data                                
+2003f2dc  frequency_data_in_Hz                          
+000198e9  frexp                                         
+000198e9  frexpl                                        
+0001abec  g_FrequencyTable                              
+2003f7f0  g_RxDescList                                  
+2003f5a8  g_TableIndex                                  
+2003f800  g_TxDescList                                  
+2003f2e0  g_channel                                     
+2003f2e4  g_current_ftw                                 
+2003f2e8  g_ftw_end                                     
+2003f2ec  g_ftw_start_config                            
+2003f2f0  g_ftw_step                                    
+2003f361  g_is_rising                                   
+2003ec54  g_pRxDescriptors                              
+2003e318  g_pTxDescriptors                              
+20000000  g_pfnRAMVectors                               
+2003f2f4  g_pfnTimerHandler                             
+00000000  g_pfnVectors                                  
+2003f71c  g_reset_hard_begin_count                      
+2003f720  g_reset_hard_end_count                        
+2003f724  g_reset_hard_last_ticks                       
+2003f5c0  g_seq_active_mask                             
+2003f658  g_seq_any_running                             
+2003f828  g_seq_arm_mask_by_ttl                         
+2003f66c  g_seq_dbg_arm_ack_count                       
+2003f670  g_seq_dbg_arm_nak_count                       
+2003f674  g_seq_dbg_arm_preload_begin_count             
+2003f678  g_seq_dbg_arm_preload_end_count               
+2003f67c  g_seq_dbg_arm_preload_last_ticks              
+2003f668  g_seq_dbg_arm_request_count                   
+2003f680  g_seq_dbg_arm_ssi_timeout_count               
+2003f64c  g_seq_dbg_boundary_late_max_ticks             
+2003f648  g_seq_dbg_boundary_late_ticks                 
+2003f644  g_seq_dbg_boundary_spin_ticks                 
+2003f690  g_seq_dbg_deadline_miss                       
+2003f6c0  g_seq_dbg_fast_fifo_queue_max_ticks           
+2003f6ac  g_seq_dbg_fast_final_handoff_ticks            
+2003f6b8  g_seq_dbg_fast_gate_release_count             
+2003f6a8  g_seq_dbg_fast_isr_max_ticks                  
+2003f6a4  g_seq_dbg_fast_isr_ticks                      
+2003f6b0  g_seq_dbg_fast_late_max_ticks                 
+2003f6bc  g_seq_dbg_fast_points_committed               
+2003f834  g_seq_dbg_hw_companion_late                   
+2003f840  g_seq_dbg_hw_companion_preload_max_ticks      
+2003f84c  g_seq_dbg_hw_companion_preload_ticks          
+2003f620  g_seq_dbg_hw_deadline_resync                  
+2003f650  g_seq_dbg_hw_engine_conflict                  
+2003f858  g_seq_dbg_hw_engine_isr_max_ticks             
+2003f864  g_seq_dbg_hw_engine_isr_ticks                 
+2003f870  g_seq_dbg_hw_engine_late_max_ticks            
+2003f87c  g_seq_dbg_hw_engine_late_ticks                
+2003f888  g_seq_dbg_hw_engine_miss                      
+2003f608  g_seq_dbg_hw_entry_arm_delay_ticks            
+2003f600  g_seq_dbg_hw_exit_late_ticks                  
+2003f5d8  g_seq_dbg_hw_fast_max_ticks                   
+2003f5dc  g_seq_dbg_hw_fast_miss                        
+2003f5d4  g_seq_dbg_hw_fast_ticks                       
+2003f61c  g_seq_dbg_hw_multi_deadline_miss              
+2003f610  g_seq_dbg_hw_multi_fast_max_ticks             
+2003f60c  g_seq_dbg_hw_multi_fast_ticks                 
+2003f618  g_seq_dbg_hw_multi_total_max_ticks            
+2003f614  g_seq_dbg_hw_multi_total_ticks                
+2003f604  g_seq_dbg_loop_boundary_late_ticks            
+2003f5f8  g_seq_dbg_loop_duration_ticks                 
+2003f6b4  g_seq_dbg_phase_low_late_max_ticks            
+2003f688  g_seq_dbg_postupdate_ticks                    
+2003f5b8  g_seq_dbg_preload_hit                         
+2003f5bc  g_seq_dbg_preload_miss                        
+2003f760  g_seq_dbg_preupdate_sample_ticks              
+2003f684  g_seq_dbg_preupdate_ticks                     
+2003f6cc  g_seq_dbg_profile_pwm_start_count             
+2003f6d0  g_seq_dbg_profile_pwm_stop_count              
+2003f6d4  g_seq_dbg_profile_pwm_sync_ticks              
+2003f6c8  g_seq_dbg_special_linear_release_count        
+2003f6c4  g_seq_dbg_special_step_release_count          
+2003f5e8  g_seq_dbg_step_to_step_pre_ticks              
+2003f5ec  g_seq_dbg_timer4_due_count                    
+2003f5f0  g_seq_dbg_timer4_unprepared_count             
+2003f68c  g_seq_dbg_total_boundary_ticks                
+2003f5c8  g_seq_dbg_trigger_isr_start                   
+2003f5cc  g_seq_dbg_trigger_to_update_ticks             
+2001028c  g_seq_def                                     
+2003ef5c  g_seq_hw_engine                               
+2003f5e0  g_seq_hw_fast_prep_estimate_ticks             
+2003f624  g_seq_hw_multi_prep_estimate_ticks            
+2003fb69  g_seq_hw_resume_kind                          
+2003f62c  g_seq_hw_resume_pending_mask                  
+2003f894  g_seq_hw_resume_update_ticks                  
+2003f5d0  g_seq_last_compensation_ticks                 
+2003f660  g_seq_pending_trigger_flags                   
+2003f664  g_seq_preload_request                         
+2003f794  g_seq_preupdate_estimate_ticks                
+2003f8a0  g_seq_priority_ttl                            
+2003f5c4  g_seq_profile_low_pending_mask                
+2003f654  g_seq_retrigger_policy                        
+2003daf8  g_seq_rt                                      
+2003f5e4  g_seq_step_to_step_pre_estimate_ticks         
+2003f632  g_seq_timer4_active                           
+2003f634  g_seq_timer4_arm_start_ticks                  
+2003f640  g_seq_timer4_deadline_ticks                   
+2003f63c  g_seq_timer4_deadline_valid                   
+2003f631  g_seq_timer4_force_service                    
+2003f630  g_seq_timer4_in_isr                           
+2003f638  g_seq_timer4_remaining_origin_ticks           
+2003f65c  g_seq_timer_armed_ticks                       
+2003f628  g_seq_timer_hw_owner_bit                      
+2003f810  g_sweep_run                                   
+2003f5b5  g_sweep_running                               
+2003f5b6  g_sweep_running2                              
+2003f438  g_tbl34_dbg_arm_ack_count                     
+2003f43c  g_tbl34_dbg_arm_nak_count                     
+2003f440  g_tbl34_dbg_arm_preload_last_ticks            
+2003f434  g_tbl34_dbg_arm_request_count                 
+2003f8ac  g_tbl34_dbg_commit_count                      
+2003f8b8  g_tbl34_dbg_event_crc_error                   
+2003f8c4  g_tbl34_dbg_event_duplicate_count             
+2003f420  g_tbl34_dbg_fast_isr_max_ticks                
+2003f41c  g_tbl34_dbg_fast_isr_ticks                    
+2003f424  g_tbl34_dbg_fast_late_max_ticks               
+2003f418  g_tbl34_dbg_fast_period_ticks                 
+2003f414  g_tbl34_dbg_fast_points_committed             
+2003f448  g_tbl34_dbg_gate_event_crc_error              
+2003f44c  g_tbl34_dbg_gate_event_duplicate_count        
+2003f400  g_tbl34_dbg_gate_release_accepted             
+2003f8d0  g_tbl34_dbg_gate_seen                         
+2003f404  g_tbl34_dbg_gate_too_early                    
+2003f8dc  g_tbl34_dbg_gate_wrong_ttl                    
+2003f8e8  g_tbl34_dbg_isr_max_ticks                     
+2003f8f4  g_tbl34_dbg_isr_ticks                         
+2003f444  g_tbl34_dbg_last_gate_release_ticks           
+2003f900  g_tbl34_dbg_late_max_ticks                    
+2003f90c  g_tbl34_dbg_late_ticks                        
+2003f918  g_tbl34_dbg_main_trigger_masked               
+2003f924  g_tbl34_dbg_preload_error                     
+2003f930  g_tbl34_dbg_preload_max_ticks                 
+2003f93c  g_tbl34_dbg_preload_ticks                     
+2003f428  g_tbl34_dbg_profile_pwm_start_count           
+2003f42c  g_tbl34_dbg_profile_pwm_stop_count            
+2003f430  g_tbl34_dbg_profile_pwm_sync_ticks            
+2003f948  g_tbl34_dbg_reset_recovery_count              
+2003f954  g_tbl34_dbg_reset_recovery_error              
+2003f960  g_tbl34_dbg_reset_recovery_master_high_ticks  
+2003f96c  g_tbl34_dbg_reset_recovery_program_count      
+2003f978  g_tbl34_dbg_reset_recovery_quad_init_count    
+2003f984  g_tbl34_dbg_reset_recovery_single_init_count  
+2003f990  g_tbl34_dbg_reset_recovery_total_ticks        
+2003f99c  g_tbl34_dbg_reset_recovery_update_count       
+2003f410  g_tbl34_dbg_sequence_aborted                  
+2003f40c  g_tbl34_dbg_sequence_completed                
+2003f408  g_tbl34_dbg_sequence_started                  
+2003f9a8  g_tbl34_dbg_start_accepted                    
+2003f9b4  g_tbl34_dbg_start_ignored_active              
+2003f9c0  g_tbl34_dbg_start_not_ready                   
+2003f9cc  g_tbl34_dbg_sweep_exit_count                  
+2003f9d8  g_tbl34_dbg_sweep_start_count                 
+2003f9e4  g_tbl34_dbg_ttl_seen                          
+2003f4b0  g_tbl351_dbg_fast_acr_frame_count             
+2003f4ac  g_tbl351_dbg_fast_cpow_frame_count            
+2003f4a0  g_tbl351_dbg_fast_expected_events             
+2003f4a8  g_tbl351_dbg_fast_ftw_frame_count             
+2003f494  g_tbl351_dbg_fast_handoff_count               
+2003f49c  g_tbl351_dbg_fast_handoff_error_count         
+2003f498  g_tbl351_dbg_fast_handoff_timer_kept_count    
+2003f4a4  g_tbl351_dbg_fast_last_index                  
+2003f9f0  g_tbl351_dbg_native_desc_profile_low_count    
+2003f9fc  g_tbl351_dbg_native_desc_start_count          
+2003fa08  g_tbl351_dbg_phase_last_acr                   
+2003fa14  g_tbl351_dbg_phase_last_cfr                   
+2003fa20  g_tbl351_dbg_phase_last_cpow                  
+2003fa2c  g_tbl351_dbg_phase_last_csr                   
+2003fa38  g_tbl351_dbg_phase_last_cw1                   
+2003fa44  g_tbl351_dbg_phase_last_fdw                   
+2003fa50  g_tbl351_dbg_phase_last_ftw                   
+2003fa5c  g_tbl351_dbg_phase_last_lsrr                  
+2003fa68  g_tbl351_dbg_phase_last_rdw                   
+2003f4e8  g_tbl353_dbg_direct_average_period_ticks      
+2003f4c8  g_tbl353_dbg_direct_chain_events              
+2003f4e4  g_tbl353_dbg_direct_excess_ticks              
+2003f4d4  g_tbl353_dbg_direct_expected_irqs             
+2003f4dc  g_tbl353_dbg_direct_expected_runtime_ticks    
+2003f4f4  g_tbl353_dbg_direct_fallback_count            
+2003f4ec  g_tbl353_dbg_direct_final_count               
+2003f4d8  g_tbl353_dbg_direct_irqs_done                 
+2003f4cc  g_tbl353_dbg_direct_layout_error_code         
+2003f4e0  g_tbl353_dbg_direct_runtime_ticks             
+2003f4c0  g_tbl353_dbg_direct_stream_addr               
+2003f4c4  g_tbl353_dbg_direct_stride                    
+2003f4d0  g_tbl353_dbg_direct_timer_tailr               
+2003f4f0  g_tbl353_dbg_direct_to_generic_count          
+2003f4bc  g_tbl353_dbg_direct_used_count                
+2003f4b4  g_tbl353_dbg_layout_prepare_count             
+2003f4b8  g_tbl353_dbg_layout_prepare_error_count       
+2003f500  g_tbl354_dbg_gate_timer_imr_after_rearm       
+2003f4fc  g_tbl354_dbg_gate_timer_rearm_count           
+2003f4f8  g_tbl354_dbg_start_latency_ticks              
+2003f504  g_tbl354_dbg_triangle_direct_count            
+2003f508  g_tbl354_dbg_triangle_exit_count              
+2003f50c  g_tbl354_dbg_triangle_exit_late_ticks         
+2003f510  g_tbl355_dbg_triangle_sync_count              
+2003f514  g_tbl355_dbg_triangle_sync_mask               
+2003f518  g_tbl356_dbg_auto_reuse_count                 
+2003f524  g_tbl356_dbg_triangle_cfr                     
+2003f530  g_tbl356_dbg_triangle_exit_irq_count          
+2003f528  g_tbl356_dbg_triangle_exit_preload_count      
+2003f534  g_tbl356_dbg_triangle_exit_preload_error      
+2003f52c  g_tbl356_dbg_triangle_exit_preload_ticks      
+2003f520  g_tbl356_dbg_triangle_no_ioupdate_srr_count   
+2003f57c  g_tbl357_dbg_triangle_exit_commit_count       
+2003f578  g_tbl358_dbg_triangle_fdw                     
+2003f51c  g_tbl358_dbg_triangle_lsrr                    
+2003f574  g_tbl358_dbg_triangle_rdw                     
+2003f454  g_tbl35_dbg_auto_fast_start_count             
+2003fa74  g_tbl35_dbg_event_acr_frame_count             
+2003fa80  g_tbl35_dbg_event_cfr_frame_count             
+2003fa8c  g_tbl35_dbg_event_cpow_frame_count            
+2003fa98  g_tbl35_dbg_event_ftw_frame_count             
+2003f474  g_tbl35_dbg_fast_final_count                  
+2003f46c  g_tbl35_dbg_fast_preload_count                
+2003f470  g_tbl35_dbg_fast_preload_error_count          
+2003f458  g_tbl35_dbg_fast_start_attempt_count          
+2003f460  g_tbl35_dbg_fast_start_fail_code              
+2003f45c  g_tbl35_dbg_fast_start_ok_count               
+2003f464  g_tbl35_dbg_fast_timer_irq_count              
+2003f478  g_tbl35_dbg_fast_to_generic_count             
+2003f468  g_tbl35_dbg_fast_update_count                 
+2003f450  g_tbl35_dbg_gate_arm_count                    
+2003faa4  g_tbl35_dbg_native_amp_exit_count             
+2003fab0  g_tbl35_dbg_native_amp_start_count            
+2003fabc  g_tbl35_dbg_native_freq_exit_count            
+2003fac8  g_tbl35_dbg_native_freq_start_count           
+2003fad4  g_tbl35_dbg_native_phase_exit_count           
+2003fae0  g_tbl35_dbg_native_phase_start_count          
+2003faec  g_tbl35_dbg_reset_blackout_ticks              
+2003faf8  g_tbl35_dbg_reset_commit_count                
+2003fb04  g_tbl35_dbg_reset_commit_error                
+2003fb10  g_tbl35_dbg_reset_prepare_bytes               
+2003fb1c  g_tbl35_dbg_reset_prepare_count               
+2003fb28  g_tbl35_dbg_reset_prepare_error               
+2003fb34  g_tbl35_dbg_reset_restore_bytes               
+2003fb40  g_tbl35_dbg_reset_restore_channel_mask        
+2003f47c  g_tbl35_dbg_triangle_config_count             
+2003f480  g_tbl35_dbg_triangle_config_error_count       
+2003f488  g_tbl35_dbg_triangle_half_ticks               
+2003f484  g_tbl35_dbg_triangle_period_ticks             
+2003f48c  g_tbl35_dbg_triangle_pwm_load                 
+2003f490  g_tbl35_dbg_triangle_pwm_match                
+2003f53c  g_tbl362_dbg_deferred_preload_count           
+2003f544  g_tbl362_dbg_emergency_preload_count          
+2003f548  g_tbl362_dbg_inline_short_preload_count       
+2003f540  g_tbl362_dbg_service_preload_count            
+2003f550  g_tbl364_dbg_early_preload_irq_count          
+2003f56c  g_tbl364_dbg_preload_batch_late_count         
+2003f568  g_tbl364_dbg_preload_batch_max_ticks          
+2003f564  g_tbl364_dbg_preload_batch_ticks              
+2003f554  g_tbl364_dbg_sync_group_count                 
+2003f558  g_tbl364_dbg_sync_last_mask                   
+2003f55c  g_tbl364_dbg_sync_last_skew_ticks             
+2003f560  g_tbl364_dbg_sync_max_skew_ticks              
+2003f54c  g_tbl365_signature                            
+2003f538  g_tbl36_dbg_native_desc_high_hold_ticks       
+2003f718  g_uart_ack_count                              
+2003f714  g_uart_reset_request_count                    
+2003f70c  g_uart_rx_byte_count                          
+2003f708  g_uart_rx_irq_count                           
+2003f710  g_uart_valid_frame_count                      
+2003f2f8  g_ui32AbnormalInts                            
+2003f2fc  g_ui32IPAddress                               
+2003f72c  g_ui32LocalTimer                              
+2003f300  g_ui32NormalInts                              
+2003f304  g_ui32PortAddress                             
+2003f308  g_ui32SysClock                                
+2003f700  g_v33_uart_signature                          
+2003f704  g_v34_uart_signature                          
+00015c19  getAD9959CommandFromTCP                       
+2003f30c  hashtagCom                                    
+0000ca19  icmp_dest_unreach                             
+0000e031  icmp_input                                    
+2003f354  index                                         
+2003f356  indexColon                                    
+2003f358  indexDollar                                   
+2003f35a  indexHashtag                                  
+2003f35c  indexStar                                     
+0000c92f  inet_chksum                                   
+0000dfc5  inet_chksum_pbuf                              
+0000a1c5  inet_chksum_pseudo                            
+00010101  inet_chksum_pseudo_partial                    
+00001a65  initTimer1                                    
+00001aa7  initTimer2                                    
+00001af1  initTimer3                                    
+00001b33  initTimer4                                    
+00001b75  initTimer5                                    
+00001bb7  initTimer6                                    
+00001bf9  initTimer7                                    
+000021d5  init_SPI0_mode_quad_bit                       
+00002165  init_SPI0_mode_single_bit                     
+000022f1  init_SPI1_mode_quad_bit                       
+00002285  init_SPI1_mode_single_bit                     
+00002415  init_SPI2_mode_quad_bit                       
+000023b5  init_SPI2_mode_single_bit                     
+00001a27  init_UART0                                    
+00009fe5  ip4_addr_isbroadcast                          
+000100c1  ip4_addr_netmask_valid                        
+0001adf4  ip_addr_any                                   
+0001adf8  ip_addr_broadcast                             
+0000e1cb  ip_input                                      
+0000bfe5  ip_output                                     
+0000bf05  ip_output_if                                  
+0000a265  ip_route                                      
+000100a5  ipaddr_addr                                   
+0000ff95  ipaddr_aton                                   
+0000ff79  ipaddr_ntoa                                   
+0000fef9  ipaddr_ntoa_r                                 
+00018fd9  ldexp                                         
+00018fd9  ldexpl                                        
+00006f7d  loadValuesFromFlashMemoryAD9959DDS            
+0000fe81  lwIPEthernetIntHandler                        
+00006f29  lwIPHostTimerHandler                          
+0000fc9d  lwIPInit                                      
+0000fbfd  lwIPLocalGWAddrGet                            
+0000fbe9  lwIPLocalIPAddrGet                            
+0000fbd5  lwIPLocalMACGet                               
+0000fbc7  lwIPLocalNetMaskGet                           
+0000fbb1  lwIPNetworkConfigChange                       
+0000f9df  lwIPTimer                                     
+0000f9d9  lwIPTimerCallbackRegister                     
+0000a0c7  lwip_htonl                                    
+0000a017  lwip_htons                                    
+0000f9c9  lwip_init                                     
+0000a0c7  lwip_ntohl                                    
+0000a017  lwip_ntohs                                    
+2003ed74  lwip_stats                                    
+00006b0d  main                                          
+0000f9ad  mem_calloc                                    
+0000c885  mem_free                                      
+0000f969  mem_init                                      
+0000a619  mem_malloc                                    
+0000a45f  mem_trim                                      
+0001a2c5  memccpy                                       
+0001a205  memcmp                                        
+000193a7  memcpy                                        
+0000a029  memp_free                                     
+0000f911  memp_init                                     
+0000e3b9  memp_malloc                                   
+000195ed  memset                                        
+2003e678  msg                                           
+2003e7a4  msg_DDS_nb                                    
+2003e8d0  msg_command                                   
+2003e9fc  msg_reply                                     
+2003eb28  msg_value                                     
+0000f8c5  netif_add                                     
+2003f310  netif_default                                 
+0000f88d  netif_find                                    
+0000f88b  netif_init                                    
+2003f314  netif_list                                    
+0000f845  netif_remove                                  
+0000f829  netif_set_addr                                
+0000f823  netif_set_default                             
+0000a5f5  netif_set_down                                
+0000a99f  netif_set_gw                                  
+0000c3fd  netif_set_ipaddr                              
+0000e753  netif_set_link_down                           
+0000e7c1  netif_set_link_up                             
+0000a9ab  netif_set_netmask                             
+0000ab6f  netif_set_up                                  
+2003f318  pColon                                        
+2003f31c  pDollar                                       
+2003f320  pHashtag                                      
+2003f324  pStar                                         
+000018e5  parse_seq_arm_frame                           
+0000139d  parse_seq_load_frame                          
+0000e421  pbuf_alloc                                    
+0000d099  pbuf_cat                                      
+0000e55d  pbuf_chain                                    
+00009ec9  pbuf_clen                                     
+0000f7f9  pbuf_coalesce                                 
+00009df5  pbuf_copy                                     
+0000b2ad  pbuf_copy_partial                             
+0000f7cd  pbuf_dechain                                  
+0000c8e1  pbuf_free                                     
+0000f4c1  pbuf_free_ooseq                               
+2003f362  pbuf_free_ooseq_pending                       
+0000f6d1  pbuf_get_at                                   
+00009be7  pbuf_header                                   
+0000f6f1  pbuf_memcmp                                   
+0000f73d  pbuf_memfind                                  
+0000a533  pbuf_realloc                                  
+00009dd5  pbuf_ref                                      
+0000f791  pbuf_strstr                                   
+0000f685  pbuf_take                                     
+0000f679  perf_init                                     
+2003f298  powValueAD9959DDS                             
+20000270  ram_heap                                      
+0000f66b  raw_bind                                      
+0000f65d  raw_connect                                   
+0000c945  raw_input                                     
+0000f635  raw_new                                       
+0000f62f  raw_recv                                      
+0000f603  raw_remove                                    
+0000f5fd  raw_send                                      
+0000f56b  raw_sendto                                    
+00018fd9  scalbn                                        
+00018fd9  scalbnl                                       
+00000d41  simpleLoadValuesFromFlashMemoryAD9959DDS1     
+00000dad  simpleLoadValuesFromFlashMemoryAD9959DDS2     
+00000e11  simpleLoadValuesFromFlashMemoryAD9959DDS3     
+0000095d  simpleflashMemoryAD9959DDS1                   
+00000839  simpleflashMemoryAD9959DDS2                   
+00000709  simpleflashMemoryAD9959DDS3                   
+00001079  simpleflashMemoryAD9959DDS_ethernet_frequency 
+00019e75  sprintf                                       
+00001009  ssi0GetData                                   
+000008a9  ssi0PutData                                   
+00000fdd  ssi0PutData_Burst                             
+00000fb1  ssi0PutData_QSPI_Fast                         
+00000779  ssi1PutData                                   
+00000f8d  ssi1PutData_Burst                             
+00000f71  ssi1PutData_QSPI_Fast                         
+0000062d  ssi2PutData                                   
+00000f4d  ssi2PutData_Burst                             
+00000f31  ssi2PutData_QSPI_Fast                         
+2003f328  starCom                                       
+00000e71  start_DDSSequence                             
+2003f32c  start_freq_hz                                 
+0000f569  stats_init                                    
+0001a43d  strchr                                        
+0001a491  strlen                                        
+000190e9  strtoul                                       
+0001898d  strtoull                                      
+0000e3ad  sys_arch_protect                              
+0000c821  sys_arch_unprotect                            
+0000f509  sys_check_timeouts                            
+0000f475  sys_now                                       
+0000f4b5  sys_restart_timeouts                          
+0000ada7  sys_timeout                                   
+0000f47b  sys_timeouts_init                             
+0000f431  sys_untimeout                                 
+2003f580  tUART                                         
+0000c36d  tcp_abandon                                   
+0000c3f1  tcp_abort                                     
+0000f429  tcp_accept                                    
+2003f330  tcp_active_pcbs                               
+2003f363  tcp_active_pcbs_changed                       
+0000ccb1  tcp_alloc                                     
+0000f425  tcp_arg                                       
+0001ada4  tcp_backoff                                   
+0000f3af  tcp_bind                                      
+2003f334  tcp_bound_pcbs                                
+0000b205  tcp_close                                     
+0000f2c7  tcp_connect                                   
+0000f271  tcp_debug_state_str                           
+0000c085  tcp_eff_send_mss                              
+0000af25  tcp_enqueue_flags                             
+0000f26b  tcp_err                                       
+0000b825  tcp_fasttmr                                   
+0000f269  tcp_init                                      
+0000dc0d  tcp_input                                     
+2003f338  tcp_input_pcb                                 
+0000b971  tcp_keepalive                                 
+2003f33c  tcp_listen_pcbs                               
+0000f1df  tcp_listen_with_backlog                       
+0000f1d9  tcp_new                                       
+0000cc9d  tcp_next_iss                                  
+0000c189  tcp_output                                    
+0001ad94  tcp_pcb_lists                                 
+0000a085  tcp_pcb_purge                                 
+0000c315  tcp_pcb_remove                                
+0001ade0  tcp_persist_backoff                           
+0000f1cf  tcp_poll                                      
+0000b7bd  tcp_process_refused_data                      
+0000f1c9  tcp_recv                                      
+0000b281  tcp_recv_null                                 
+0000b249  tcp_recved                                    
+0000cf45  tcp_rexmit                                    
+0000cfa1  tcp_rexmit_fast                               
+0000b889  tcp_rexmit_rto                                
+0000b011  tcp_rst                                       
+0000cfed  tcp_seg_copy                                  
+0000a057  tcp_seg_free                                  
+0000a06f  tcp_segs_free                                 
+0000c029  tcp_send_empty_ack                            
+0000afcb  tcp_send_fin                                  
+0000f1c5  tcp_sent                                      
+00017ad7  tcp_server_init                               
+0000f1c1  tcp_setprio                                   
+0000f171  tcp_shutdown                                  
+0000b9d1  tcp_slowtmr                                   
+0001acdc  tcp_state_str                                 
+2003f340  tcp_ticks                                     
+0000b0a1  tcp_timer_needed                              
+2003f344  tcp_tmp_pcb                                   
+0000bc85  tcp_tmr                                       
+2003f348  tcp_tw_pcbs                                   
+0000b219  tcp_update_rcv_ann_wnd                        
+0000ee99  tcp_write                                     
+0000b8c5  tcp_zero_window_probe                         
+2003f004  tempDataUART                                  
+2003f2a0  time_step_s                                   
+2003f34c  time_step_us                                  
+00009dad  tivaif_init                                   
+0000eda1  tivaif_interrupt                              
+0000e7ff  tivaif_process_phy_interrupt                  
+00000cbd  trackRegisterValuesFromDDSOnReboot            
+00000ca7  trackRegisterValuesFromSingleAD9959DDSOnReboot
+00009b83  udp_bind                                      
+0000e70d  udp_connect                                   
+0000e6ef  udp_disconnect                                
+0000e6ed  udp_init                                      
+0000ca41  udp_input                                     
+0000e6d1  udp_new                                       
+2003f350  udp_pcbs                                      
+0000e6c3  udp_recv                                      
+0000e697  udp_remove                                    
+0000e68f  udp_send                                      
+0000e65d  udp_sendto                                    
+0000e571  udp_sendto_if                                 
+00017579  ulocaltime                                    
+0001766d  umktime                                       
+00017565  urand                                         
+0001754b  usnprintf                                     
+0001752b  usprintf                                      
+00017525  usrand                                        
+0001751d  ustrcasecmp                                   
+00017515  ustrcmp                                       
+00017443  ustrlen                                       
+000174cb  ustrncasecmp                                  
+00017455  ustrncmp                                      
+00016ff5  ustrncpy                                      
+0001748b  ustrstr                                       
+000172f7  ustrtof                                       
+00017255  ustrtoul                                      
+0001701f  uvsnprintf                                    
+0001a4c9  wcslen                                        
+00000af9  write_immediate                               
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                          
+-------   ----                                          
+00000000  __TI_static_base__                            
+00000000  g_pfnVectors                                  
+00000201  FreqDeciToFTW                                 
+0000021f  AngleToPOW                                    
+000003b5  Seq_AbortAndReleaseControl                    
+000003b5  Sequence_AbortAndReleaseControl               
+00000400  __STACK_SIZE                                  
+000005ad  choiceNbDDS                                   
+0000062d  ssi2PutData                                   
+00000691  choiceChannelDDS3                             
+00000709  simpleflashMemoryAD9959DDS3                   
+00000779  ssi1PutData                                   
+000007b9  choiceChannelDDS2                             
+00000839  simpleflashMemoryAD9959DDS2                   
+000008a9  ssi0PutData                                   
+000008ed  choiceChannelDDS1                             
+0000095d  simpleflashMemoryAD9959DDS1                   
+000009d5  Init_Timer2A_Sweep                            
+00000a21  Apply_Sweep_Configuration_uart                
+00000a21  ExecuteManualSweep_DDS_Setup_uart             
+00000af9  write_immediate                               
+00000ca7  trackRegisterValuesFromSingleAD9959DDSOnReboot
+00000cbd  trackRegisterValuesFromDDSOnReboot            
+00000cd9  choiceChannelDDS                              
+00000d41  simpleLoadValuesFromFlashMemoryAD9959DDS1     
+00000dad  simpleLoadValuesFromFlashMemoryAD9959DDS2     
+00000e11  simpleLoadValuesFromFlashMemoryAD9959DDS3     
+00000e71  start_DDSSequence                             
+00000f31  ssi2PutData_QSPI_Fast                         
+00000f4d  ssi2PutData_Burst                             
+00000f71  ssi1PutData_QSPI_Fast                         
+00000f8d  ssi1PutData_Burst                             
+00000fb1  ssi0PutData_QSPI_Fast                         
+00000fdd  ssi0PutData_Burst                             
+00001009  ssi0GetData                                   
+00001079  simpleflashMemoryAD9959DDS_ethernet_frequency 
+0000139d  parse_seq_load_frame                          
+000018e5  parse_seq_arm_frame                           
+000019b3  PeripheralEnableInit                          
+00001a27  init_UART0                                    
+00001a65  initTimer1                                    
+00001aa7  initTimer2                                    
+00001af1  initTimer3                                    
+00001b33  initTimer4                                    
+00001b75  initTimer5                                    
+00001bb7  initTimer6                                    
+00001bf9  initTimer7                                    
+00001d35  PortA_Init                                    
+00001d87  PortB_Init                                    
+00001de1  PortD_Init                                    
+00001e39  PortH_Init                                    
+00001e91  PortK_Init                                    
+00001ee5  DDS_GPIOK_Init_Fast                           
+00001f25  PortM_Init                                    
+00001f85  PortL_Init                                    
+00001ff5  PortN_Init                                    
+00002049  PortP_Init                                    
+000020a1  IO_interrupt_portL                            
+00002165  init_SPI0_mode_single_bit                     
+000021d5  init_SPI0_mode_quad_bit                       
+00002285  init_SPI1_mode_single_bit                     
+000022f1  init_SPI1_mode_quad_bit                       
+000023b5  init_SPI2_mode_single_bit                     
+00002415  init_SPI2_mode_quad_bit                       
+00002501  Seq_ResetAllChannels                          
+00006a11  Seq_HandleTriggeredMask                       
+00006aa1  Seq_ServicePendingTriggers                    
+00006b0d  main                                          
+00006eb9  DisplayIPAddress                              
+00006eff  DisplayPortAddress                            
+00006f29  lwIPHostTimerHandler                          
+00006f7d  loadValuesFromFlashMemoryAD9959DDS            
+0000705d  flashMemoryAD9959DDS                          
+00007131  Seq_StopAll                                   
+00007771  UARTIntHandler                                
+00008a81  Timer7A_IntHandler                            
+00008aa5  Timer6A_IntHandler                            
+00008ab5  Timer5A_IntHandler                            
+00008d1d  Seq_Timer4A_IntHandler                        
+00009213  Timer4A_IntHandler                            
+00009241  Timer3A_IntHandler                            
+00009319  Timer2A_IntHandler                            
+0000949d  Timer1A_IntHandler                            
+000095b1  TTL8                                          
+000095bd  TTL7                                          
+000095c3  TTL6                                          
+000095cb  TTL5                                          
+000095d3  TTL4                                          
+000095db  TTL3                                          
+000095e3  TTL2                                          
+000095e9  SysTickIntHandler                             
+000095f1  MasterResetAllDDS                             
+00009623  Init_Timer1A_Sweep                            
+00009699  Apply_Sweep_Configuration_on_interrupt_port   
+00009791  GPIOIntHandler                                
+000098f5  FreqToFTW                                     
+0000993d  ExecuteManualSweep_DDS_Setup_ethernet         
+00009a91  Displaydata                                   
+00009ad1  Apply_Sweep_Configuration_ethernet            
+00009b83  udp_bind                                      
+00009be7  pbuf_header                                   
+00009c4b  InitDMADescriptors                            
+00009dad  tivaif_init                                   
+00009dd5  pbuf_ref                                      
+00009df5  pbuf_copy                                     
+00009ec9  pbuf_clen                                     
+00009fe5  ip4_addr_isbroadcast                          
+0000a017  lwip_htons                                    
+0000a017  lwip_ntohs                                    
+0000a029  memp_free                                     
+0000a057  tcp_seg_free                                  
+0000a06f  tcp_segs_free                                 
+0000a085  tcp_pcb_purge                                 
+0000a0c7  lwip_htonl                                    
+0000a0c7  lwip_ntohl                                    
+0000a1c5  inet_chksum_pseudo                            
+0000a265  ip_route                                      
+0000a45f  mem_trim                                      
+0000a533  pbuf_realloc                                  
+0000a5d1  etharp_cleanup_netif                          
+0000a5f5  netif_set_down                                
+0000a619  mem_malloc                                    
+0000a7a9  autoip_start                                  
+0000a99f  netif_set_gw                                  
+0000a9ab  netif_set_netmask                             
+0000a9b7  dhcp_release                                  
+0000aadf  dhcp_renew                                    
+0000ab5f  autoip_stop                                   
+0000ab6f  netif_set_up                                  
+0000ad6f  dhcp_coarse_tmr                               
+0000ada7  sys_timeout                                   
+0000ae1d  etharp_tmr                                    
+0000af25  tcp_enqueue_flags                             
+0000afcb  tcp_send_fin                                  
+0000b011  tcp_rst                                       
+0000b0a1  tcp_timer_needed                              
+0000b205  tcp_close                                     
+0000b219  tcp_update_rcv_ann_wnd                        
+0000b249  tcp_recved                                    
+0000b281  tcp_recv_null                                 
+0000b2ad  pbuf_copy_partial                             
+0000b7bd  tcp_process_refused_data                      
+0000b825  tcp_fasttmr                                   
+0000b889  tcp_rexmit_rto                                
+0000b8c5  tcp_zero_window_probe                         
+0000b971  tcp_keepalive                                 
+0000b9d1  tcp_slowtmr                                   
+0000bc85  tcp_tmr                                       
+0000bcf5  etharp_query                                  
+0000bea9  dhcp_fine_tmr                                 
+0000bf05  ip_output_if                                  
+0000bfe5  ip_output                                     
+0000c029  tcp_send_empty_ack                            
+0000c085  tcp_eff_send_mss                              
+0000c189  tcp_output                                    
+0000c315  tcp_pcb_remove                                
+0000c36d  tcp_abandon                                   
+0000c3f1  tcp_abort                                     
+0000c3fd  netif_set_ipaddr                              
+0000c4db  autoip_tmr                                    
+0000c5c1  etharp_raw                                    
+0000c695  etharp_request                                
+0000c715  etharp_output                                 
+0000c821  sys_arch_unprotect                            
+0000c885  mem_free                                      
+0000c8e1  pbuf_free                                     
+0000c92f  inet_chksum                                   
+0000c945  raw_input                                     
+0000ca19  icmp_dest_unreach                             
+0000ca41  udp_input                                     
+0000cc9d  tcp_next_iss                                  
+0000ccb1  tcp_alloc                                     
+0000cf45  tcp_rexmit                                    
+0000cfa1  tcp_rexmit_fast                               
+0000cfed  tcp_seg_copy                                  
+0000d099  pbuf_cat                                      
+0000dc0d  tcp_input                                     
+0000dfc5  inet_chksum_pbuf                              
+0000e031  icmp_input                                    
+0000e1cb  ip_input                                      
+0000e3ad  sys_arch_protect                              
+0000e3b9  memp_malloc                                   
+0000e421  pbuf_alloc                                    
+0000e55d  pbuf_chain                                    
+0000e571  udp_sendto_if                                 
+0000e65d  udp_sendto                                    
+0000e68f  udp_send                                      
+0000e697  udp_remove                                    
+0000e6c3  udp_recv                                      
+0000e6d1  udp_new                                       
+0000e6ed  udp_init                                      
+0000e6ef  udp_disconnect                                
+0000e70d  udp_connect                                   
+0000e753  netif_set_link_down                           
+0000e765  dhcp_network_changed                          
+0000e7a7  autoip_network_changed                        
+0000e7c1  netif_set_link_up                             
+0000e7ff  tivaif_process_phy_interrupt                  
+0000e8f9  autoip_arp_reply                              
+0000ea4f  dhcp_arp_reply                                
+0000ebb5  ethernet_input                                
+0000eda1  tivaif_interrupt                              
+0000ee99  tcp_write                                     
+0000f171  tcp_shutdown                                  
+0000f1c1  tcp_setprio                                   
+0000f1c5  tcp_sent                                      
+0000f1c9  tcp_recv                                      
+0000f1cf  tcp_poll                                      
+0000f1d9  tcp_new                                       
+0000f1df  tcp_listen_with_backlog                       
+0000f269  tcp_init                                      
+0000f26b  tcp_err                                       
+0000f271  tcp_debug_state_str                           
+0000f2c7  tcp_connect                                   
+0000f3af  tcp_bind                                      
+0000f425  tcp_arg                                       
+0000f429  tcp_accept                                    
+0000f431  sys_untimeout                                 
+0000f475  sys_now                                       
+0000f47b  sys_timeouts_init                             
+0000f4b5  sys_restart_timeouts                          
+0000f4c1  pbuf_free_ooseq                               
+0000f509  sys_check_timeouts                            
+0000f569  stats_init                                    
+0000f56b  raw_sendto                                    
+0000f5fd  raw_send                                      
+0000f603  raw_remove                                    
+0000f62f  raw_recv                                      
+0000f635  raw_new                                       
+0000f65d  raw_connect                                   
+0000f66b  raw_bind                                      
+0000f679  perf_init                                     
+0000f685  pbuf_take                                     
+0000f6d1  pbuf_get_at                                   
+0000f6f1  pbuf_memcmp                                   
+0000f73d  pbuf_memfind                                  
+0000f791  pbuf_strstr                                   
+0000f7cd  pbuf_dechain                                  
+0000f7f9  pbuf_coalesce                                 
+0000f823  netif_set_default                             
+0000f829  netif_set_addr                                
+0000f845  netif_remove                                  
+0000f88b  netif_init                                    
+0000f88d  netif_find                                    
+0000f8c5  netif_add                                     
+0000f911  memp_init                                     
+0000f969  mem_init                                      
+0000f9ad  mem_calloc                                    
+0000f9c9  lwip_init                                     
+0000f9d9  lwIPTimerCallbackRegister                     
+0000f9df  lwIPTimer                                     
+0000f9f5  dhcp_stop                                     
+0000fa2d  dhcp_start                                    
+0000fbb1  lwIPNetworkConfigChange                       
+0000fbc7  lwIPLocalNetMaskGet                           
+0000fbd5  lwIPLocalMACGet                               
+0000fbe9  lwIPLocalIPAddrGet                            
+0000fbfd  lwIPLocalGWAddrGet                            
+0000fc9d  lwIPInit                                      
+0000fe81  lwIPEthernetIntHandler                        
+0000fef9  ipaddr_ntoa_r                                 
+0000ff79  ipaddr_ntoa                                   
+0000ff95  ipaddr_aton                                   
+000100a5  ipaddr_addr                                   
+000100c1  ip4_addr_netmask_valid                        
+00010101  inet_chksum_pseudo_partial                    
+000101c1  etharp_find_addr                              
+000101fb  dhcp_set_struct                               
+00010215  dhcp_inform                                   
+000102ab  dhcp_cleanup                                  
+000102bd  autoip_set_struct                             
+000131f1  Tbl34_Timer_DDS2_IntHandler                   
+00013309  Tbl34_Timer_DDS1_IntHandler                   
+00013411  Tbl34_Timer_DDS0_IntHandler                   
+000134fd  Tbl34_StopAll                                 
+00013531  Tbl34_EnterMode                               
+000135cd  Tbl34_ServiceArm                              
+00013671  Tbl34_Service                                 
+00013691  Tbl34_ResetConfiguration                      
+000136d3  Tbl34_PreloadWorkerIntHandler                 
+000136dd  Tbl34_AnyActive                               
+000138e1  Tbl34_ParseFrame                              
+00014251  Tbl34_IsArmed                                 
+00014257  Tbl34_Init                                    
+0001489d  Tbl34_HandleTriggeredMask                     
+000148ff  Tbl34_ArmAckPending                           
+00014979  Set_time_step                                 
+00014d15  Set_frequency_step                            
+00015145  SetFrequencyTuningWord1_ethernet              
+00015569  SetpowValue_ethernet                          
+00015659  SetchannelDDS                                 
+00015727  SetamplValue_ethernet                         
+00015851  SetFrequencyTuningWord_ethernet               
+00015c19  getAD9959CommandFromTCP                       
+00015e21  executeAD9959SingleBufferedCmd                
+00015e7d  SetamplValueAD9959DDS3                        
+00016009  SetamplValueAD9959DDS2                        
+00016149  SetamplValueAD9959DDS1                        
+000161f5  SetPOW_ValueAD9959DDS3                        
+00016279  SetPOW_ValueAD9959DDS2                        
+000162ed  SetPOW_ValueAD9959DDS1                        
+00016379  SetFrequencyTuningWord0_DDS3_burst            
+000163c9  SetFrequencyTuningWord0_DDS3                  
+00016437  SetFrequencyTuningWord0_DDS2_burst            
+00016479  SetFrequencyTuningWord0_DDS2                  
+000164dd  SetFrequencyTuningWord0_DDS1_burst            
+00016521  SetFrequencyTuningWord0_DDS1                  
+00016569  GetpowValueDDSAD9959                          
+00016573  GetamplitudeValueDDSAD9959                    
+0001657d  GetFrequencyTuningWord0                       
+000165a5  __TI_printfi                                  
+00016ff3  __aeabi_idiv0                                 
+00016ff3  __aeabi_ldiv0                                 
+00016ff5  ustrncpy                                      
+0001701f  uvsnprintf                                    
+00017255  ustrtoul                                      
+000172f7  ustrtof                                       
+00017443  ustrlen                                       
+00017455  ustrncmp                                      
+0001748b  ustrstr                                       
+000174cb  ustrncasecmp                                  
+00017515  ustrcmp                                       
+0001751d  ustrcasecmp                                   
+00017525  usrand                                        
+0001752b  usprintf                                      
+0001754b  usnprintf                                     
+00017565  urand                                         
+00017579  ulocaltime                                    
+0001766d  umktime                                       
+00017ad7  tcp_server_init                               
+00017cd1  UARTwrite                                     
+00017d19  UARTvprintf                                   
+00017ee7  UARTprintf                                    
+00017f01  UARTgets                                      
+00017f85  UARTgetc                                      
+00017f9d  UARTStdioConfig                               
+00018299  SysCtlClockFreqSet                            
+00018669  __aeabi_dsub                                  
+00018673  __aeabi_dadd                                  
+00018821  GPIOPadConfigSet                              
+0001898d  strtoull                                      
+00018ae9  LocatorVersionSet                             
+00018b7d  LocatorMACAddrSet                             
+00018b99  LocatorInit                                   
+00018bdf  LocatorClientIPSet                            
+00018bf1  LocatorBoardTypeSet                           
+00018bf9  LocatorBoardIDSet                             
+00018c01  LocatorAppTitleSet                            
+00018d7d  __aeabi_ddiv                                  
+00018fd9  ldexp                                         
+00018fd9  ldexpl                                        
+00018fd9  scalbn                                        
+00018fd9  scalbnl                                       
+000190e9  strtoul                                       
+000191f9  __aeabi_dmul                                  
+000193a7  __aeabi_memcpy                                
+000193a7  __aeabi_memcpy4                               
+000193a7  __aeabi_memcpy8                               
+000193a7  memcpy                                        
+00019443  __aeabi_uldivmod                              
+000194d9  __aeabi_cdcmpeq                               
+000194d9  __aeabi_cdcmple                               
+0001955f  __aeabi_cdrcmple                              
+000195e5  __aeabi_memclr                                
+000195e5  __aeabi_memclr4                               
+000195e5  __aeabi_memclr8                               
+000195e7  __aeabi_memset                                
+000195e7  __aeabi_memset4                               
+000195e7  __aeabi_memset8                               
+000195ed  memset                                        
+00019661  EMACInit                                      
+00019749  FlashProgram                                  
+000197b1  IntDisable                                    
+00019819  IntEnable                                     
+00019881  __TI_decompress_lzss                          
+000198e9  frexp                                         
+000198e9  frexpl                                        
+0001994d  TimerConfigure                                
+000199ad  EMACPHYConfigSet                              
+00019a05  GPIOIntTypeSet                                
+00019ab3  __TI_ltoa                                     
+00019b59  SysCtlPeripheralReset                         
+00019ba9  GPIOPinConfigure                              
+00019c41  atoi                                          
+00019c8d  IntPendClear                                  
+00019d1d  __aeabi_d2iz                                  
+00019d65  UARTConfigSetExpClk                           
+00019dad  __TI_auto_init_nobinit_nopinit                
+00019df1  __aeabi_d2uiz                                 
+00019e35  __aeabi_uidiv                                 
+00019e35  __aeabi_uidivmod                              
+00019e75  sprintf                                       
+00019ef3  SSIConfigSetExpClk                            
+00019f2f  EMACIntEnable                                 
+00019f69  EMACConfigSet                                 
+00019fa1  SysCtlPeripheralReady                         
+00019fd9  EMACConfigGet                                 
+0001a00d  EMACIntClear                                  
+0001a041  IntRegister                                   
+0001a075  SysCtlPeripheralEnable                        
+0001a0a9  _c_int00_noargs                               
+0001a0dd  FlashErase                                    
+0001a10d  __aeabi_i2d                                   
+0001a13b  EMACIntStatus                                 
+0001a167  GPIODirModeSet                                
+0001a193  EMACPHYRead                                   
+0001a1b9  EMACPHYWrite                                  
+0001a1e1  IntPrioritySet                                
+0001a205  memcmp                                        
+0001a229  UARTDisable                                   
+0001a269  __aeabi_ui2d                                  
+0001a289  EMACAddrGet                                   
+0001a2a9  SysCtlGPIOAHBEnable                           
+0001a2c5  memccpy                                       
+0001a2e1  GPIOPinTypeGPIOOutput                         
+0001a2fb  copysign                                      
+0001a2fb  copysignl                                     
+0001a315  TimerControlLevel                             
+0001a32d  TimerDisable                                  
+0001a345  TimerIntRegister                              
+0001a375  __aeabi_lmul                                  
+0001a38d  EMACReset                                     
+0001a3a3  EMACRxEnable                                  
+0001a3b9  EMACTxEnable                                  
+0001a3cf  GPIOPinTypeEthernetLED                        
+0001a3e5  GPIOPinTypeGPIOInput                          
+0001a3fb  GPIOPinTypeSSI                                
+0001a411  GPIOPinTypeTimer                              
+0001a427  GPIOPinTypeUART                               
+0001a43d  strchr                                        
+0001a455  SysTickEnable                                 
+0001a469  SysTickIntEnable                              
+0001a47d  UARTEnable                                    
+0001a491  strlen                                        
+0001a4a5  TimerLoadSet                                  
+0001a4b7  TimerMatchSet                                 
+0001a4c9  wcslen                                        
+0001a4dd  EMACFrameFilterSet                            
+0001a4ed  IntMasterDisable                              
+0001a4fd  IntMasterEnable                               
+0001a50d  SysTickPeriodSet                              
+0001a51d  GPIOIntDisable                                
+0001a52b  TimerEnable                                   
+0001a539  UARTCharsAvail                                
+0001a547  __TI_decompress_none                          
+0001a555  CPUcpsid                                      
+0001a561  CPUcpsie                                      
+0001a56d  GPIOIntEnable                                 
+0001a579  SSIAdvModeSet                                 
+0001a585  SSIDataGet                                    
+0001a591  __TI_zero_init                                
+0001a59d  ResetISR                                      
+0001a5a9  SSIAdvFrameHoldDisable                        
+0001a5b3  SSIAdvFrameHoldEnable                         
+0001a5bd  SSIEnable                                     
+0001a5c7  TimerIntDisable                               
+0001a5d1  UARTCharGet                                   
+0001a5db  UARTCharPut                                   
+0001a5e5  UARTIntStatus                                 
+0001a5f9  EMACPowerManagementStatusGet                  
+0001a601  EMACTxDMAPollDemand                           
+0001a609  TimerIntEnable                                
+0001a611  UARTIntEnable                                 
+0001a619  __aeabi_errno_addr                            
+0001a621  EMACRxDMADescriptorListSet                    
+0001a627  EMACTimestampIntStatus                        
+0001a62d  EMACTxDMADescriptorListSet                    
+0001a633  GPIOIntClear                                  
+0001a639  GPIOPinWrite                                  
+0001a63f  SSIClockSourceSet                             
+0001a645  SysCtlDelay                                   
+0001a64b  UARTIntClear                                  
+0001a64f  _system_pre_init                              
+0001a653  C$$EXIT                                       
+0001a653  abort                                         
+0001a808  _ctypes_                                      
+0001abec  g_FrequencyTable                              
+0001acdc  tcp_state_str                                 
+0001ad94  tcp_pcb_lists                                 
+0001ada4  tcp_backoff                                   
+0001adb4  TYPEDDS                                       
+0001ade0  tcp_persist_backoff                           
+0001ade7  ethbroadcast                                  
+0001aded  ethzero                                       
+0001adf4  ip_addr_any                                   
+0001adf8  ip_addr_broadcast                             
+0001af10  __TI_Handler_Table_Base                       
+0001af1c  __TI_Handler_Table_Limit                      
+0001af30  __TI_CINIT_Base                               
+0001af48  __TI_CINIT_Limit                              
+20000000  __start___llvm_prf_cnts                       
+20000000  __stop___llvm_prf_cnts                        
+20000000  g_pfnRAMVectors                               
+20000270  ram_heap                                      
+2001028c  g_seq_def                                     
+2003daf8  g_seq_rt                                      
+2003e318  g_pTxDescriptors                              
+2003e678  msg                                           
+2003e7a4  msg_DDS_nb                                    
+2003e8d0  msg_command                                   
+2003e9fc  msg_reply                                     
+2003eb28  msg_value                                     
+2003ec54  g_pRxDescriptors                              
+2003ed74  lwip_stats                                    
+2003ef5c  g_seq_hw_engine                               
+2003f004  tempDataUART                                  
+2003f18c  dhcp_rx_options_val                           
+2003f258  controlRegisterValueAD9959DDS                 
+2003f268  frequencyValueAD9959DDS                       
+2003f284  dhcp_rx_options_given                         
+2003f290  amplValueAD9959DDS                            
+2003f298  powValueAD9959DDS                             
+2003f2a0  time_step_s                                   
+2003f2ac  atCom                                         
+2003f2b0  colonCom                                      
+2003f2b4  current_header                                
+2003f2b8  current_iphdr_dest                            
+2003f2bc  current_iphdr_src                             
+2003f2c0  current_netif                                 
+2003f2c4  dataReadSSIoneByte                            
+2003f2c8  dollarCom                                     
+2003f2cc  freq_end_hz                                   
+2003f2d0  freq_start_hz                                 
+2003f2d4  freq_step_hz                                  
+2003f2d8  frequency_data                                
+2003f2dc  frequency_data_in_Hz                          
+2003f2e0  g_channel                                     
+2003f2e4  g_current_ftw                                 
+2003f2e8  g_ftw_end                                     
+2003f2ec  g_ftw_start_config                            
+2003f2f0  g_ftw_step                                    
+2003f2f4  g_pfnTimerHandler                             
+2003f2f8  g_ui32AbnormalInts                            
+2003f2fc  g_ui32IPAddress                               
+2003f300  g_ui32NormalInts                              
+2003f304  g_ui32PortAddress                             
+2003f308  g_ui32SysClock                                
+2003f30c  hashtagCom                                    
+2003f310  netif_default                                 
+2003f314  netif_list                                    
+2003f318  pColon                                        
+2003f31c  pDollar                                       
+2003f320  pHashtag                                      
+2003f324  pStar                                         
+2003f328  starCom                                       
+2003f32c  start_freq_hz                                 
+2003f330  tcp_active_pcbs                               
+2003f334  tcp_bound_pcbs                                
+2003f338  tcp_input_pcb                                 
+2003f33c  tcp_listen_pcbs                               
+2003f340  tcp_ticks                                     
+2003f344  tcp_tmp_pcb                                   
+2003f348  tcp_tw_pcbs                                   
+2003f34c  time_step_us                                  
+2003f350  udp_pcbs                                      
+2003f354  index                                         
+2003f356  indexColon                                    
+2003f358  indexDollar                                   
+2003f35a  indexHashtag                                  
+2003f35c  indexStar                                     
+2003f35e  BUFFERED_MODE                                 
+2003f35f  BUFFERED_MODE_JUST_CHANGED                    
+2003f360  REPLY_FROM_TCP_WANTED                         
+2003f361  g_is_rising                                   
+2003f362  pbuf_free_ooseq_pending                       
+2003f363  tcp_active_pcbs_changed                       
+2003f400  g_tbl34_dbg_gate_release_accepted             
+2003f404  g_tbl34_dbg_gate_too_early                    
+2003f408  g_tbl34_dbg_sequence_started                  
+2003f40c  g_tbl34_dbg_sequence_completed                
+2003f410  g_tbl34_dbg_sequence_aborted                  
+2003f414  g_tbl34_dbg_fast_points_committed             
+2003f418  g_tbl34_dbg_fast_period_ticks                 
+2003f41c  g_tbl34_dbg_fast_isr_ticks                    
+2003f420  g_tbl34_dbg_fast_isr_max_ticks                
+2003f424  g_tbl34_dbg_fast_late_max_ticks               
+2003f428  g_tbl34_dbg_profile_pwm_start_count           
+2003f42c  g_tbl34_dbg_profile_pwm_stop_count            
+2003f430  g_tbl34_dbg_profile_pwm_sync_ticks            
+2003f434  g_tbl34_dbg_arm_request_count                 
+2003f438  g_tbl34_dbg_arm_ack_count                     
+2003f43c  g_tbl34_dbg_arm_nak_count                     
+2003f440  g_tbl34_dbg_arm_preload_last_ticks            
+2003f444  g_tbl34_dbg_last_gate_release_ticks           
+2003f448  g_tbl34_dbg_gate_event_crc_error              
+2003f44c  g_tbl34_dbg_gate_event_duplicate_count        
+2003f450  g_tbl35_dbg_gate_arm_count                    
+2003f454  g_tbl35_dbg_auto_fast_start_count             
+2003f458  g_tbl35_dbg_fast_start_attempt_count          
+2003f45c  g_tbl35_dbg_fast_start_ok_count               
+2003f460  g_tbl35_dbg_fast_start_fail_code              
+2003f464  g_tbl35_dbg_fast_timer_irq_count              
+2003f468  g_tbl35_dbg_fast_update_count                 
+2003f46c  g_tbl35_dbg_fast_preload_count                
+2003f470  g_tbl35_dbg_fast_preload_error_count          
+2003f474  g_tbl35_dbg_fast_final_count                  
+2003f478  g_tbl35_dbg_fast_to_generic_count             
+2003f47c  g_tbl35_dbg_triangle_config_count             
+2003f480  g_tbl35_dbg_triangle_config_error_count       
+2003f484  g_tbl35_dbg_triangle_period_ticks             
+2003f488  g_tbl35_dbg_triangle_half_ticks               
+2003f48c  g_tbl35_dbg_triangle_pwm_load                 
+2003f490  g_tbl35_dbg_triangle_pwm_match                
+2003f494  g_tbl351_dbg_fast_handoff_count               
+2003f498  g_tbl351_dbg_fast_handoff_timer_kept_count    
+2003f49c  g_tbl351_dbg_fast_handoff_error_count         
+2003f4a0  g_tbl351_dbg_fast_expected_events             
+2003f4a4  g_tbl351_dbg_fast_last_index                  
+2003f4a8  g_tbl351_dbg_fast_ftw_frame_count             
+2003f4ac  g_tbl351_dbg_fast_cpow_frame_count            
+2003f4b0  g_tbl351_dbg_fast_acr_frame_count             
+2003f4b4  g_tbl353_dbg_layout_prepare_count             
+2003f4b8  g_tbl353_dbg_layout_prepare_error_count       
+2003f4bc  g_tbl353_dbg_direct_used_count                
+2003f4c0  g_tbl353_dbg_direct_stream_addr               
+2003f4c4  g_tbl353_dbg_direct_stride                    
+2003f4c8  g_tbl353_dbg_direct_chain_events              
+2003f4cc  g_tbl353_dbg_direct_layout_error_code         
+2003f4d0  g_tbl353_dbg_direct_timer_tailr               
+2003f4d4  g_tbl353_dbg_direct_expected_irqs             
+2003f4d8  g_tbl353_dbg_direct_irqs_done                 
+2003f4dc  g_tbl353_dbg_direct_expected_runtime_ticks    
+2003f4e0  g_tbl353_dbg_direct_runtime_ticks             
+2003f4e4  g_tbl353_dbg_direct_excess_ticks              
+2003f4e8  g_tbl353_dbg_direct_average_period_ticks      
+2003f4ec  g_tbl353_dbg_direct_final_count               
+2003f4f0  g_tbl353_dbg_direct_to_generic_count          
+2003f4f4  g_tbl353_dbg_direct_fallback_count            
+2003f4f8  g_tbl354_dbg_start_latency_ticks              
+2003f4fc  g_tbl354_dbg_gate_timer_rearm_count           
+2003f500  g_tbl354_dbg_gate_timer_imr_after_rearm       
+2003f504  g_tbl354_dbg_triangle_direct_count            
+2003f508  g_tbl354_dbg_triangle_exit_count              
+2003f50c  g_tbl354_dbg_triangle_exit_late_ticks         
+2003f510  g_tbl355_dbg_triangle_sync_count              
+2003f514  g_tbl355_dbg_triangle_sync_mask               
+2003f518  g_tbl356_dbg_auto_reuse_count                 
+2003f51c  g_tbl358_dbg_triangle_lsrr                    
+2003f520  g_tbl356_dbg_triangle_no_ioupdate_srr_count   
+2003f524  g_tbl356_dbg_triangle_cfr                     
+2003f528  g_tbl356_dbg_triangle_exit_preload_count      
+2003f52c  g_tbl356_dbg_triangle_exit_preload_ticks      
+2003f530  g_tbl356_dbg_triangle_exit_irq_count          
+2003f534  g_tbl356_dbg_triangle_exit_preload_error      
+2003f538  g_tbl36_dbg_native_desc_high_hold_ticks       
+2003f53c  g_tbl362_dbg_deferred_preload_count           
+2003f540  g_tbl362_dbg_service_preload_count            
+2003f544  g_tbl362_dbg_emergency_preload_count          
+2003f548  g_tbl362_dbg_inline_short_preload_count       
+2003f54c  g_tbl365_signature                            
+2003f550  g_tbl364_dbg_early_preload_irq_count          
+2003f554  g_tbl364_dbg_sync_group_count                 
+2003f558  g_tbl364_dbg_sync_last_mask                   
+2003f55c  g_tbl364_dbg_sync_last_skew_ticks             
+2003f560  g_tbl364_dbg_sync_max_skew_ticks              
+2003f564  g_tbl364_dbg_preload_batch_ticks              
+2003f568  g_tbl364_dbg_preload_batch_max_ticks          
+2003f56c  g_tbl364_dbg_preload_batch_late_count         
+2003f574  g_tbl358_dbg_triangle_rdw                     
+2003f578  g_tbl358_dbg_triangle_fdw                     
+2003f57c  g_tbl357_dbg_triangle_exit_commit_count       
+2003f580  tUART                                         
+2003f588  dataReadSSI                                   
+2003f590  dataReadSSIempty                              
+2003f598  CURRENT_DDS                                   
+2003f59c  CURRENT_ChannelDDS                            
+2003f5a0  ChannelDDS_UART                               
+2003f5a4  NbDDS_UART                                    
+2003f5a8  g_TableIndex                                  
+2003f5ac  currentNbTimeLines                            
+2003f5b0  currentNbValueLines                           
+2003f5b5  g_sweep_running                               
+2003f5b6  g_sweep_running2                              
+2003f5b8  g_seq_dbg_preload_hit                         
+2003f5bc  g_seq_dbg_preload_miss                        
+2003f5c0  g_seq_active_mask                             
+2003f5c4  g_seq_profile_low_pending_mask                
+2003f5c8  g_seq_dbg_trigger_isr_start                   
+2003f5cc  g_seq_dbg_trigger_to_update_ticks             
+2003f5d0  g_seq_last_compensation_ticks                 
+2003f5d4  g_seq_dbg_hw_fast_ticks                       
+2003f5d8  g_seq_dbg_hw_fast_max_ticks                   
+2003f5dc  g_seq_dbg_hw_fast_miss                        
+2003f5e0  g_seq_hw_fast_prep_estimate_ticks             
+2003f5e4  g_seq_step_to_step_pre_estimate_ticks         
+2003f5e8  g_seq_dbg_step_to_step_pre_ticks              
+2003f5ec  g_seq_dbg_timer4_due_count                    
+2003f5f0  g_seq_dbg_timer4_unprepared_count             
+2003f5f8  g_seq_dbg_loop_duration_ticks                 
+2003f600  g_seq_dbg_hw_exit_late_ticks                  
+2003f604  g_seq_dbg_loop_boundary_late_ticks            
+2003f608  g_seq_dbg_hw_entry_arm_delay_ticks            
+2003f60c  g_seq_dbg_hw_multi_fast_ticks                 
+2003f610  g_seq_dbg_hw_multi_fast_max_ticks             
+2003f614  g_seq_dbg_hw_multi_total_ticks                
+2003f618  g_seq_dbg_hw_multi_total_max_ticks            
+2003f61c  g_seq_dbg_hw_multi_deadline_miss              
+2003f620  g_seq_dbg_hw_deadline_resync                  
+2003f624  g_seq_hw_multi_prep_estimate_ticks            
+2003f628  g_seq_timer_hw_owner_bit                      
+2003f62c  g_seq_hw_resume_pending_mask                  
+2003f630  g_seq_timer4_in_isr                           
+2003f631  g_seq_timer4_force_service                    
+2003f632  g_seq_timer4_active                           
+2003f634  g_seq_timer4_arm_start_ticks                  
+2003f638  g_seq_timer4_remaining_origin_ticks           
+2003f63c  g_seq_timer4_deadline_valid                   
+2003f640  g_seq_timer4_deadline_ticks                   
+2003f644  g_seq_dbg_boundary_spin_ticks                 
+2003f648  g_seq_dbg_boundary_late_ticks                 
+2003f64c  g_seq_dbg_boundary_late_max_ticks             
+2003f650  g_seq_dbg_hw_engine_conflict                  
+2003f654  g_seq_retrigger_policy                        
+2003f658  g_seq_any_running                             
+2003f65c  g_seq_timer_armed_ticks                       
+2003f660  g_seq_pending_trigger_flags                   
+2003f664  g_seq_preload_request                         
+2003f668  g_seq_dbg_arm_request_count                   
+2003f66c  g_seq_dbg_arm_ack_count                       
+2003f670  g_seq_dbg_arm_nak_count                       
+2003f674  g_seq_dbg_arm_preload_begin_count             
+2003f678  g_seq_dbg_arm_preload_end_count               
+2003f67c  g_seq_dbg_arm_preload_last_ticks              
+2003f680  g_seq_dbg_arm_ssi_timeout_count               
+2003f684  g_seq_dbg_preupdate_ticks                     
+2003f688  g_seq_dbg_postupdate_ticks                    
+2003f68c  g_seq_dbg_total_boundary_ticks                
+2003f690  g_seq_dbg_deadline_miss                       
+2003f6a4  g_seq_dbg_fast_isr_ticks                      
+2003f6a8  g_seq_dbg_fast_isr_max_ticks                  
+2003f6ac  g_seq_dbg_fast_final_handoff_ticks            
+2003f6b0  g_seq_dbg_fast_late_max_ticks                 
+2003f6b4  g_seq_dbg_phase_low_late_max_ticks            
+2003f6b8  g_seq_dbg_fast_gate_release_count             
+2003f6bc  g_seq_dbg_fast_points_committed               
+2003f6c0  g_seq_dbg_fast_fifo_queue_max_ticks           
+2003f6c4  g_seq_dbg_special_step_release_count          
+2003f6c8  g_seq_dbg_special_linear_release_count        
+2003f6cc  g_seq_dbg_profile_pwm_start_count             
+2003f6d0  g_seq_dbg_profile_pwm_stop_count              
+2003f6d4  g_seq_dbg_profile_pwm_sync_ticks              
+2003f700  g_v33_uart_signature                          
+2003f704  g_v34_uart_signature                          
+2003f708  g_uart_rx_irq_count                           
+2003f70c  g_uart_rx_byte_count                          
+2003f710  g_uart_valid_frame_count                      
+2003f714  g_uart_reset_request_count                    
+2003f718  g_uart_ack_count                              
+2003f71c  g_reset_hard_begin_count                      
+2003f720  g_reset_hard_end_count                        
+2003f724  g_reset_hard_last_ticks                       
+2003f72c  g_ui32LocalTimer                              
+2003f760  g_seq_dbg_preupdate_sample_ticks              
+2003f794  g_seq_preupdate_estimate_ticks                
+2003f7f0  g_RxDescList                                  
+2003f800  g_TxDescList                                  
+2003f810  g_sweep_run                                   
+2003f814  NbDDS                                         
+2003f818  ChannelDDS                                    
+2003f828  g_seq_arm_mask_by_ttl                         
+2003f834  g_seq_dbg_hw_companion_late                   
+2003f840  g_seq_dbg_hw_companion_preload_max_ticks      
+2003f84c  g_seq_dbg_hw_companion_preload_ticks          
+2003f858  g_seq_dbg_hw_engine_isr_max_ticks             
+2003f864  g_seq_dbg_hw_engine_isr_ticks                 
+2003f870  g_seq_dbg_hw_engine_late_max_ticks            
+2003f87c  g_seq_dbg_hw_engine_late_ticks                
+2003f888  g_seq_dbg_hw_engine_miss                      
+2003f894  g_seq_hw_resume_update_ticks                  
+2003f8a0  g_seq_priority_ttl                            
+2003f8ac  g_tbl34_dbg_commit_count                      
+2003f8b8  g_tbl34_dbg_event_crc_error                   
+2003f8c4  g_tbl34_dbg_event_duplicate_count             
+2003f8d0  g_tbl34_dbg_gate_seen                         
+2003f8dc  g_tbl34_dbg_gate_wrong_ttl                    
+2003f8e8  g_tbl34_dbg_isr_max_ticks                     
+2003f8f4  g_tbl34_dbg_isr_ticks                         
+2003f900  g_tbl34_dbg_late_max_ticks                    
+2003f90c  g_tbl34_dbg_late_ticks                        
+2003f918  g_tbl34_dbg_main_trigger_masked               
+2003f924  g_tbl34_dbg_preload_error                     
+2003f930  g_tbl34_dbg_preload_max_ticks                 
+2003f93c  g_tbl34_dbg_preload_ticks                     
+2003f948  g_tbl34_dbg_reset_recovery_count              
+2003f954  g_tbl34_dbg_reset_recovery_error              
+2003f960  g_tbl34_dbg_reset_recovery_master_high_ticks  
+2003f96c  g_tbl34_dbg_reset_recovery_program_count      
+2003f978  g_tbl34_dbg_reset_recovery_quad_init_count    
+2003f984  g_tbl34_dbg_reset_recovery_single_init_count  
+2003f990  g_tbl34_dbg_reset_recovery_total_ticks        
+2003f99c  g_tbl34_dbg_reset_recovery_update_count       
+2003f9a8  g_tbl34_dbg_start_accepted                    
+2003f9b4  g_tbl34_dbg_start_ignored_active              
+2003f9c0  g_tbl34_dbg_start_not_ready                   
+2003f9cc  g_tbl34_dbg_sweep_exit_count                  
+2003f9d8  g_tbl34_dbg_sweep_start_count                 
+2003f9e4  g_tbl34_dbg_ttl_seen                          
+2003f9f0  g_tbl351_dbg_native_desc_profile_low_count    
+2003f9fc  g_tbl351_dbg_native_desc_start_count          
+2003fa08  g_tbl351_dbg_phase_last_acr                   
+2003fa14  g_tbl351_dbg_phase_last_cfr                   
+2003fa20  g_tbl351_dbg_phase_last_cpow                  
+2003fa2c  g_tbl351_dbg_phase_last_csr                   
+2003fa38  g_tbl351_dbg_phase_last_cw1                   
+2003fa44  g_tbl351_dbg_phase_last_fdw                   
+2003fa50  g_tbl351_dbg_phase_last_ftw                   
+2003fa5c  g_tbl351_dbg_phase_last_lsrr                  
+2003fa68  g_tbl351_dbg_phase_last_rdw                   
+2003fa74  g_tbl35_dbg_event_acr_frame_count             
+2003fa80  g_tbl35_dbg_event_cfr_frame_count             
+2003fa8c  g_tbl35_dbg_event_cpow_frame_count            
+2003fa98  g_tbl35_dbg_event_ftw_frame_count             
+2003faa4  g_tbl35_dbg_native_amp_exit_count             
+2003fab0  g_tbl35_dbg_native_amp_start_count            
+2003fabc  g_tbl35_dbg_native_freq_exit_count            
+2003fac8  g_tbl35_dbg_native_freq_start_count           
+2003fad4  g_tbl35_dbg_native_phase_exit_count           
+2003fae0  g_tbl35_dbg_native_phase_start_count          
+2003faec  g_tbl35_dbg_reset_blackout_ticks              
+2003faf8  g_tbl35_dbg_reset_commit_count                
+2003fb04  g_tbl35_dbg_reset_commit_error                
+2003fb10  g_tbl35_dbg_reset_prepare_bytes               
+2003fb1c  g_tbl35_dbg_reset_prepare_count               
+2003fb28  g_tbl35_dbg_reset_prepare_error               
+2003fb34  g_tbl35_dbg_reset_restore_bytes               
+2003fb40  g_tbl35_dbg_reset_restore_channel_mask        
+2003fb69  g_seq_hw_resume_kind                          
+2003fb6c  errno                                         
+2003fb80  __stack                                       
+2003ff80  __STACK_END                                   
+2003ff80  __STACK_TOP                                   
+ffffffff  __TI_pprof_out_hndl                           
+ffffffff  __TI_prof_data_size                           
+ffffffff  __TI_prof_data_start                          
+ffffffff  __binit__                                     
+ffffffff  __c_args__                                    
+ffffffff  binit                                         
+UNDEFED   __mpu_init                                    
+UNDEFED   _system_post_cinit                            
+
+[839 symbols]
