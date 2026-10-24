@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<!-- Copyright (c) 2013 Texas Instruments Incorporated. All rights reserved. -->
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <title>I/O Control TM4C1294</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="javascript.js" language="JavaScript1.2" charset="utf-8"></script>
+</head>
+
+<body>
+<p id="content_heading"> TM4C1294 and DDS board AD9852 (AD)</p>
+<hr size="2" width="100%">
+<!--#FormVars-->
+    <div id="heading">
+      <table width="100%">
+        <tr>
+          <td>
+            <a id="heading_ti" target="_" href="https://www.univ-paris13.fr/">
+              <!--<img src="ti.jpg" alt="Texas Instruments">-->
+			  <img src="USPN.jpg" alt="USPN-LPL" width="200" height="100">
+            </a>
+          </td>
+          <td width="100%">
+            <div id="heading_h1">
+               ARM TM4C1294 on bus DDS AD9852<br>
+            </div>
+            <div id="heading_h2">
+              Fabrice Wiotte Ingenieur Electronicien CNRS-LPL<br>
+              <a target="_" href="http://www-lpl.univ-paris13.fr/"</a>
+			  <a target="_" href="https://wiki.electroniciens.cnrs.fr/index.php/Le_groupe_DDS"</a>
+              https://wiki.electroniciens.cnrs.fr/index.php/Le_groupe_DDS
+            </div>
+          </td>
+          <td>
+            <a id="heading_tiva" target="_" href="http://www-lpl.univ-paris13.fr/FR/">
+              <img src="LPL.jpg" alt="TM4C" width="200" height="200">
+            </a>
+          </td>
+        </tr>
+      </table>
+      <hr><hr>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="about.htm" id="about">About development</a></li>
+        <li><a href="overview.htm" id="overview">TM4C Series Overview</a></li>
+        <li><a href="block.htm" id="block">Pcb Board with TM4C1294NCPDT</a></li>
+        <!--<li><a target="_" href="http://www.ti.com/tool/ek-tm4c1294xl">EK-TM4C1294XL Product Page</a></li>-->
+        <!--<li><a target="_" href="http://www.ti.com/tm4c">TM4C Series TM4C129x Family Product Page</a></li>-->
+        <!--<li><a href="io_http.htm" id="io_http">I/O Control 1 tm4c1294<br>(HTTP Requests)</a></li>-->
+        <li><a href="io_cgi.ssi" id="io_cgi">I/O Control 2 tm4c1294<br>(SSI/CGI)</a></li>
+      </ul>
+      <!--<img src="ek-tm4c1294xl.jpg" alt="EK-TM4C1294XL">-->
+      
+      
+      
+	  <img src="Tm4c1294_DDS.jpg" alt="TM4C1294 for DDS bus AD9852" width="210" height="120">
+    </div>
+    <div id="content">
+    <table width="100%">
+        <tbody>
+            <tr>
+                <!--<td align="left" valign="top" width="75%">-->
+                    <center>
+                       <!--<h2 align="center">control</h2>-->
+                    </center>
+                    <!--<hr size="2" width="100%">-->
+                    <!--<ul></ul>This demonstration shows another method of performing control and status reporting. This time, we use Server Side Include tags to replace text in the page as it is being server from the Tiva C Series EK board and standard HTML forms to send data to a CGI handler
+                    running on the board. &nbsp;This example does cause the page to be reloaded whenever form data is submitted but it &nbsp;involves less complex HTML to perform the task.-->
+                    <br>
+                    <br>
+                    <!--<table align="center" border="1" width="80%">-->
+                       <!-- <tbody>-->
+                            <tr>
+                                <td>
+                                    <!-- <form method="get" action="iocontrol.cgi" name="iocontrol">-->
+                                      <!-- <table align="center" border="0" cellpadding="2" cellspacing="2" width="100%">-->
+                                           <!--  <tbody>-->
+                                                <tr>
+                                                    <!--<td align="left" valign="top">-->
+                                                       <!-- <b>Control</b>-->
+                                                    </td>
+                                                   <!--<td align="center" valign="top">-->
+                                                      <!--  <b>Current</b>-->
+                                                    </td>
+                                                   <!--<td align="center" valign="top">-->
+                                                       <!-- <b>New</b>-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <!--<td align="left" valign="top">LED State</td>-->
+                                                    <!--<td align="center" valign="top">-->
+                                                        <!--#LEDtxt-->
+                                                    </td>
+                                                    <!--<td align="center" valign="top">-->
+                                                       <!-- <input name="LEDOn" value="1" type="checkbox">-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <!--<td align="left" valign="top">Animation Speed</td>-->
+                                                   <!-- <td align="center" valign="top">-->
+                                                        <!--#speed-->
+                                                    </td>
+                                                    <!-- <td align="center" valign="top">-->
+                                                       <!-- <input value="10" maxlength="3" size="10" name="speed_percent">-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                   <!-- <td colspan="3" rowspan="1" align="center" valign="middle">-->
+                                                       <!-- <input name="Update" value="Update Settings" type="submit">-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                </td>
+                            </tr>
+                       <!-- </tbody>-->
+                    </table>
+                    <ul></ul>
+                    <br>
+                    <!--<table align="center" border="1" cellpadding="2" cellspacing="2" width="80%">-->
+                        <tbody>
+                            <tr>
+                                <td align="left" valign="top">
+                                    <form method="get" action="settxt.cgi" name="settxt">
+                                        <table border="0" cellpadding="2" cellspacing="2" width="100%">
+                                            <tbody>
+                                                <tr align="center">
+                                                    <td valign="top">
+                                                     <b><big>Frequency DDS AD9852(Hz)</big>:<br></b>
+                                                        <input maxlength="40" size="40" name="FrequencyDDS">
+                                                        <!--<input name="Display" value="Send" type="submit">-->
+                             <tr>                        
+                                  <td align="left" valign="top">
+                                    <form method="get" action="settxt.cgi" name="settxt">
+                                        <table border="0" cellpadding="3" cellspacing="3" width="100%">
+                                            <tbody>
+                                                <tr align="center">
+                                                    <td valign="top">
+                                                     <b><big>Amplitude DDS AD9852 (0-4095)</big>:<br></b>
+                                                        <input maxlength="40" size="40" name="AmplitudeDDS">
+                                                        <!--<input name="Display" value="Send" type="submit">-->
+														<tr>                        
+                            <td align="left" valign="top">
+                                  <form method="get" action="settxt.cgi" name="settxt">
+                                        <table border="0" cellpadding="4" cellspacing="4" width="100%">
+                                            <tbody>
+                                                <tr align="center">
+                                                    <td valign="top">
+                                                     <b><big>select DDS (1,2,3,4)</big>:<br></b>
+                                                        <input maxlength="20" size="20" name="NbDDS">
+                                                        <!--<input name="Display" value="Send" type="submit">-->
+																										 
+							<tr>                        
+                                  <td align="left" valign="top">
+                                        <table border="0" cellpadding="3" cellspacing="3" width="100%">
+                                            <tbody>
+                                                <tr align="center">
+                                                    <td valign="top">
+                                                      <table border="0" cellpadding="4" cellspacing="4" width="100%">
+														 <input name="Display" value="Send" type="submit">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <div id="footing">
+      <hr><hr>
+      Fabrice Wiotte November 2021
+    </div>
+</body>
+</html>
